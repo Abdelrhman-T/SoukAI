@@ -1,1 +1,5 @@
 pandas==3.0.3
+pydantic-settings==2.14.1
+groq==1.4.0
+requests==2.34.2
+openai==2.14.0
