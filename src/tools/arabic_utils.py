@@ -2,6 +2,7 @@ import re
 from typing import List
 
 ARABIC_DIACRITICS = re.compile(r"[\u0617-\u061A\u064B-\u0652]")
+ARABIC_LETTER_REPEAT_RE = re.compile(r'([\u0621-\u064A])\1{2,}')
 TATWEEL = "\u0640"
 PUNCT_RE = re.compile(r"[^\w\s\u0600-\u06FF]")
 WHITESPACE_RE = re.compile(r"\s+")
@@ -14,7 +15,7 @@ def normalize_arabic(text: str) -> str:
     normalized = normalized.replace("أ", "ا").replace("إ", "ا").replace("آ", "ا")
     normalized = normalized.replace("ة", "ه").replace("ى", "ي")
     normalized = WHITESPACE_RE.sub(" ", normalized).strip()
-    normalized = re.sub(r'(.)\1{2,}', r'\1', normalized)
+    normalized = ARABIC_LETTER_REPEAT_RE.sub(r'\1', normalized)
     return normalized
 
 
@@ -36,7 +37,7 @@ def ratio_hits(tokens: List[str], keywords: List[str]) -> float:
     if not keywords:
         return 0.0
     matched = sum(1 for keyword in keywords if normalize_arabic(keyword) in tokens)
-    return matched / len(keywords)
+    return matched / len(tokens)
 
 
 def detect_script(text: str) -> str:

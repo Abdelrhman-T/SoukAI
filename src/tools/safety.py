@@ -11,12 +11,14 @@ PROFANITY_KEYWORDS = [
 ]
 
 INJECTION_KEYWORDS = [
-    "تجاهل التعليمات",
+    "تجاهل التعليمات", "تجاهل", "التعليمات", "قيود", "بدون قيود"
     "ignore previous instructions",
     "system prompt",
+    "SYSTEM","SYSTEM:", "override", "set"
     "اكسر القواعد",
     "اعطني السيستم برومبت",
     "developer message",
+    "SQL", "SELECT", "FROM", "WHERE", "DROP", "TABLE"
 ]
 
 

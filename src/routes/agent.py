@@ -181,8 +181,8 @@ def _answer(state: AgentState) -> AgentState:
         return {
             "provider": provider_name,
             "model": model_name,
-            "answer": state["blocked_reason"],
-            "draft_response_ar": state["blocked_reason"] | "",
+            "answer": state["blocked_reason"], # type: ignore
+            "draft_response_ar": state["blocked_reason"],
             "input_tokens": 0,
             "output_tokens": 0,
         }

@@ -5,8 +5,14 @@ from pathlib import Path
 from tools.arabic_utils import normalize_arabic
 
 ORDER_RE = re.compile(
-    r"ORD[-_]?(\d{4,10})|(?:رقم\s*الطلب|كود\s*الطلب|الطلب|الرقم)\s*[:#-]?\s*(\d{4,10})",
-    re.IGNORECASE,
+    r"""
+    (?:ORD|ORDER)[-_]?(\d{4,10})
+    |
+    (?:رقم\s*الطلب|كود\s*الطلب|الطلب|الرقم|طلبي|اوردر|order_id)
+    \s*[:#-]?\s*
+    (\d{4,10})
+    """,
+    re.IGNORECASE | re.VERBOSE,
 )
 
 DATA_DIR = Path(__file__).resolve().parents[2] / "data" / "mock"
