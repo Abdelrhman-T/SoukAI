@@ -9,7 +9,7 @@ from pydantic import BaseModel
 
 from helpers import intent_rules
 from helpers.config import Settings, getSettings
-from prompts.system_prompt import sys_prompt
+from prompts.system_prompt import draft_response_prompt
 from stores.LLMEnums import LLMEnums
 from tools.arabic_utils import detect_script, normalize_arabic
 from tools.classification import classify_intent
@@ -209,7 +209,7 @@ def _answer(state: AgentState) -> AgentState:
         context="\n\n".join(context_parts),
         provider_name=provider_name,
         app_settings=state["app_settings"],
-        sys_prompt=sys_prompt,
+        sys_prompt=draft_response_prompt,
     )
 
     return {
