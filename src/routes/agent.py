@@ -7,10 +7,12 @@ from langchain_core.runnables import RunnableLambda
 from langgraph.graph import END, START, StateGraph
 from pydantic import BaseModel
 
+from helpers import intent_rules
 from helpers.config import Settings, getSettings
 from prompts.system_prompt import sys_prompt
 from stores.LLMEnums import LLMEnums
 from tools.arabic_utils import detect_script, normalize_arabic
+from tools.classification import classify_intent
 from tools.generate_response import (EmptyResponseError, Prompt,
                                      ProviderInitializationError,
                                      ResponseGenerationError, llm_response)
@@ -31,6 +33,7 @@ class AgentState(TypedDict, total=False):
     is_safe: bool
     injection_detected: bool
     blocked_reason: Optional[str]
+    intent: str
     provider: str
     model: str
     answer: str
@@ -85,6 +88,15 @@ def _safety_check(state: AgentState) -> AgentState:
     }
 
 
+def _classify_intent(state: AgentState) -> AgentState:
+
+    return {
+        "intent": classify_intent(
+            state["normalized_text"],
+        )
+    }
+
+
 def _answer(state: AgentState) -> AgentState:
     provider_name = state["provider"]
     model_name = state["model"]
@@ -118,11 +130,15 @@ def _graph_factory() -> Any:
     workflow.add_node(
         "safety_check_node", RunnableLambda(_safety_check),
     )
+    workflow.add_node(
+        "classify_intent_node", RunnableLambda(_classify_intent),
+    )
     workflow.add_node("answer_node", RunnableLambda(_answer))
 
     workflow.add_edge(START, "preprocess_node")
     workflow.add_edge("preprocess_node", "safety_check_node")
-    workflow.add_edge("safety_check_node", "answer_node")
+    workflow.add_edge("safety_check_node", "classify_intent_node")
+    workflow.add_edge("classify_intent_node", "answer_node")
     workflow.add_edge("answer_node", END)
 
     return workflow.compile()
@@ -176,6 +192,7 @@ async def answer_with_agent(
             "script": result.get("script", detect_script(request.text)),
             "is_safe": result.get("is_safe", False),
             "injection_detected": result.get("injection_detected", False),
+            "intent": result.get("intent", intent_rules.DEFAULT_INTENT),
             "answer": result["answer"],
         }
     )
