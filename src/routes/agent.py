@@ -13,6 +13,7 @@ from prompts.system_prompt import draft_response_prompt
 from stores.LLMEnums import LLMEnums
 from tools.arabic_utils import detect_script, normalize_arabic
 from tools.classification import classify_intent
+from tools.escalation import escalate_to_human
 from tools.generate_response import (EmptyResponseError,
                                      ProviderInitializationError,
                                      ResponseGenerationError, draft_response)
@@ -46,6 +47,8 @@ class AgentState(TypedDict, total=False):
     provider: str
     model: str
     answer: str
+    escalation_reason: str
+    escalation_priority: str
     max_input_characters: int
     app_settings: Settings
 
@@ -212,10 +215,21 @@ def _answer(state: AgentState) -> AgentState:
         sys_prompt=draft_response_prompt,
     )
 
+    escalation_reason = response.get("reason", "")
+    escalation_priority = response.get("priority", "")
+
+    if escalation_reason or escalation_priority:
+        escalate_to_human(
+            reason=escalation_reason,
+            priority=escalation_priority,
+        )
+
     return {
         "provider": response["provider"],
         "model": model_name,
-        "answer": response["answer"],
+        "answer": response["response"],
+        "escalation_reason": escalation_reason,
+        "escalation_priority": escalation_priority,
     }
 
 

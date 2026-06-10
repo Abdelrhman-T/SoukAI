@@ -1,4 +1,6 @@
+import json
 import logging
+import re
 
 from pydantic import BaseModel, field_validator
 
@@ -6,6 +8,7 @@ from helpers.config import Settings
 from stores.LLMProviderFactory import LLMProviderFactory
 
 logger = logging.getLogger(__name__)
+JSON_BLOCK_RE = re.compile(r"\{.*\}", re.DOTALL)
 
 
 class Prompt(BaseModel):
@@ -84,6 +87,40 @@ def llm_response(
     }
 
 
+def _parse_draft_payload(answer: str) -> dict[str, str | None]:
+    if not answer or not answer.strip():
+        raise EmptyResponseError("Draft response payload was empty.")
+
+    match = JSON_BLOCK_RE.search(answer.strip())
+    payload_text = match.group(0) if match else answer.strip()
+
+    try:
+        payload = json.loads(payload_text)
+    except json.JSONDecodeError:
+        try:
+            payload = json.loads(payload_text.replace("'", '"'))
+        except json.JSONDecodeError as exc:
+            raise ResponseGenerationError(
+                "Draft response payload was not valid JSON."
+            ) from exc
+
+    if not isinstance(payload, dict):
+        raise ResponseGenerationError("Draft response payload must be a JSON object.")
+
+    response_text = str(payload.get("response", "")).strip()
+    if not response_text:
+        raise EmptyResponseError("Draft response did not include `response`.")
+
+    priority = payload.get("priority")
+    reason = payload.get("reason")
+
+    return {
+        "response": response_text,
+        "priority": str(priority).strip() if priority is not None else "",
+        "reason": str(reason).strip() if reason is not None else "",
+    }
+
+
 def draft_response(
     intent: str,
     context: str,
@@ -101,9 +138,8 @@ def draft_response(
         prompt_sections.append(f"النية المصنفة: {intent.strip()}")
 
     prompt_sections.append(f"السياق:\n{context.strip()}")
-    prompt_sections.append("اكتب ردا عربيا قصيرا ومفيدا للعميل.")
 
-    return llm_response(
+    raw_response = llm_response(
         provider_name=provider_name,
         prompt=Prompt(
             sys_prompt=sys_prompt,
@@ -111,3 +147,13 @@ def draft_response(
         ),
         app_settings=app_settings,
     )
+
+    parsed_payload = _parse_draft_payload(raw_response["answer"])
+
+    return {
+        "provider": raw_response["provider"],
+        "answer": parsed_payload["response"],
+        "response": parsed_payload["response"],
+        "priority": parsed_payload["priority"],
+        "reason": parsed_payload["reason"],
+    }
