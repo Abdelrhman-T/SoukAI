@@ -29,6 +29,13 @@ class Settings(BaseSettings):
     DEFAULT_MAX_OUTPUT_TOKENS: int
     DEFAULT_TEMPERATURE: float
 
+
+
+    SAFETY_BLOCK_MESSAGE: str
+    INJECTION_BLOCK_MESSAGE: str
+    EMPTY_INPUT_MESSAGE: str
+    LONG_INPUT_MESSAGE: str
+
     class Config:
         env_file = ".env"
 
