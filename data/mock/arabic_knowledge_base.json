@@ -4,8 +4,7 @@
     "title_ar": "سياسة إلغاء الحجز واسترداد المبلغ",
     "category": "refund_policy",
     "applies_to_intents": [
-      "refund_request",
-      "payment_issue"
+      "refund_request"
     ],
     "default_route": "Returns",
     "content_ar": "يمكن للنزيل طلب استرداد المبلغ إذا لم يتم توفير الغرفة المؤكدة، أو إذا كانت الغرفة مختلفة جوهرياً عن الوصف المدفوع مثل إطلالة بحرية غير متوفرة. تتم مراجعة الطلب خلال 24 إلى 72 ساعة. في الحالات عالية الخطورة أو التي تتضمن تهديداً بالتصعيد القانوني، يجب التصعيد لموظف بشري.",
@@ -39,8 +38,7 @@
     "title_ar": "سياسة تجهيز الغرفة وعدم توفر غرفة عند الوصول",
     "category": "booking_availability",
     "applies_to_intents": [
-      "product_quality",
-      "refund_request"
+      "product_quality"
     ],
     "default_route": "CX Manager",
     "content_ar": "عند وصول العميل ومعه حجز مؤكد ثم يتم إبلاغه بعدم توفر غرفة، تعتبر الحالة عالية الأولوية. يجب التحقق من الحجز، محاولة توفير غرفة بديلة بنفس المستوى أو أعلى، أو عرض استرداد/تعويض حسب الحالة.",
@@ -158,8 +156,7 @@
     "title_ar": "المواقف والرسوم الإضافية غير المتوقعة",
     "category": "extra_charges",
     "applies_to_intents": [
-      "payment_issue",
-      "product_quality"
+      "payment_issue"
     ],
     "default_route": "Billing",
     "content_ar": "إذا ذكر العميل رسوماً غير متوقعة مثل رسوم موقف سيارة يومية أو اختلاف سعر الحجز عن السعر عند الوصول، يجب التحقق من شروط الحجز وإرسال الحالة إلى Billing إذا كان النزاع مالياً.",
@@ -240,7 +237,6 @@
     "title_ar": "تسجيل الشكاوى المتناقضة أو الساخرة",
     "category": "sarcasm_handling",
     "applies_to_intents": [
-      "product_quality",
       "abusive_or_spam"
     ],
     "default_route": "CX Manager",
