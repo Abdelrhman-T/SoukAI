@@ -23,9 +23,6 @@ from tools.validation import is_empty, is_long
 
 agent_router = APIRouter(prefix="/api/v1/agent", tags=["api_v1", "agent"])
 
-MISSING_ORDER_ID_MESSAGE = "من فضلك أرسل رقم الطلب أو رقم الحجز حتى أقدر أساعدك."
-ORDER_NOT_FOUND_MESSAGE = "لم أتمكن من العثور على الطلب. تأكد من رقم الطلب وأعد إرساله."
-
 
 class AgentRequest(BaseModel):
     text: str
@@ -186,14 +183,14 @@ def _answer(state: AgentState) -> AgentState:
         return {
             "provider": provider_name,
             "model": model_name,
-            "answer": MISSING_ORDER_ID_MESSAGE,
+            "answer": Settings.MISSING_ORDER_ID_MESSAGE,
         }
 
     if state.get("order_id") and not state.get("order"):
         return {
             "provider": provider_name,
             "model": model_name,
-            "answer": ORDER_NOT_FOUND_MESSAGE,
+            "answer": Settings.ORDER_NOT_FOUND_MESSAGE,
         }
 
     context_parts = [f"رسالة العميل:\n{state['normalized_text']}"]
