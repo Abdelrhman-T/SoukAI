@@ -1,3 +1,4 @@
+import time
 from functools import lru_cache
 from typing import Any, Optional, TypedDict
 
@@ -13,6 +14,7 @@ from prompts.system_prompt import draft_response_prompt
 from stores.LLMEnums import LLMEnums
 from tools.arabic_utils import detect_script, normalize_arabic
 from tools.classification import classify_intent
+from tools.cost_tracking import estimate_cost, estimate_latency
 from tools.escalation import escalate_to_human
 from tools.generate_response import (EmptyResponseError,
                                      ProviderInitializationError,
@@ -45,8 +47,11 @@ class AgentState(TypedDict, total=False):
     provider: str
     model: str
     answer: str
+    draft_response_ar: str
     escalation_reason: str
     escalation_priority: str
+    input_tokens: int
+    output_tokens: int
     max_input_characters: int
     app_settings: Settings
 
@@ -177,20 +182,29 @@ def _answer(state: AgentState) -> AgentState:
             "provider": provider_name,
             "model": model_name,
             "answer": state["blocked_reason"],
+            "draft_response_ar": state["blocked_reason"] | "",
+            "input_tokens": 0,
+            "output_tokens": 0,
         }
 
     if not state.get("order_id") and not state.get("injection_detected", False):
         return {
             "provider": provider_name,
             "model": model_name,
-            "answer": Settings.MISSING_ORDER_ID_MESSAGE,
+            "answer": state["app_settings"].MISSING_ORDER_ID_MESSAGE,
+            "draft_response_ar": state["app_settings"].MISSING_ORDER_ID_MESSAGE,
+            "input_tokens": 0,
+            "output_tokens": 0,
         }
 
     if state.get("order_id") and not state.get("order"):
         return {
             "provider": provider_name,
             "model": model_name,
-            "answer": Settings.ORDER_NOT_FOUND_MESSAGE,
+            "answer": state["app_settings"].ORDER_NOT_FOUND_MESSAGE,
+            "draft_response_ar": state["app_settings"].ORDER_NOT_FOUND_MESSAGE,
+            "input_tokens": 0,
+            "output_tokens": 0,
         }
 
     context_parts = [f"رسالة العميل:\n{state['normalized_text']}"]
@@ -227,9 +241,66 @@ def _answer(state: AgentState) -> AgentState:
         "provider": response["provider"],
         "model": model_name,
         "answer": response["response"],
+        "draft_response_ar": response["response"],
         "escalation_reason": escalation_reason,
         "escalation_priority": escalation_priority,
+        "input_tokens": response.get("input_tokens", 0),
+        "output_tokens": response.get("output_tokens", 0),
     }
+
+
+def _build_entities(order_id: Optional[str], order: Optional[dict[str, Any]]) -> dict[str, Any]:
+    order = order or {}
+    return {
+        "order_id": order_id,
+        "product": order.get("hotel_name"),
+        "amount": order.get("room_type"),
+        "date": order.get("stay_description"),
+    }
+
+
+def _build_reasoning_trace(result: AgentState) -> list[str]:
+    trace = [
+        f"normalized_input_script={result.get('script', 'unknown')}",
+        f"safety_check={'passed' if result.get('is_safe') else 'blocked'}",
+        f"intent={result.get('intent', intent_rules.DEFAULT_INTENT)} confidence={result.get('intent_confidence', 0.0)}",
+    ]
+
+    if result.get("order_id"):
+        trace.append(f"order_lookup=matched:{result['order_id']}" if result.get("order") else f"order_lookup=not_found:{result['order_id']}")
+    else:
+        trace.append("order_lookup=missing_order_id")
+
+    trace.append(
+        f"routing={result.get('routed_team', 'Auto Response')} human_required={result.get('requires_human', False)}"
+    )
+
+    if result.get("escalation_priority"):
+        trace.append(
+            f"urgency={result.get('escalation_priority')} reason={result.get('escalation_reason', '')}".strip()
+        )
+
+    return trace
+
+
+def _build_tools_used(result: AgentState) -> list[str]:
+    tools_used = [
+        "normalize_arabic",
+        "detect_script",
+        "safety_check",
+        "classify_intent",
+        "extract_order_id",
+    ]
+
+    if result.get("order_id"):
+        tools_used.append("lookup_order")
+
+    tools_used.append("search_kb")
+
+    if result.get("input_tokens", 0) or result.get("output_tokens", 0):
+        tools_used.append("draft_response")
+
+    return tools_used
 
 
 def _resolve_generation_target(app_settings: Settings) -> tuple[str, str]:
@@ -274,6 +345,7 @@ async def answer_with_agent(
     request: AgentRequest,
     app_settings: Settings = Depends(getSettings),
 ):
+    start_time = time.perf_counter()
     graph = _graph_factory()
     provider_name, model_name = _resolve_generation_target(app_settings)
 
@@ -310,19 +382,23 @@ async def answer_with_agent(
             detail=app_settings.LONG_INPUT_MESSAGE,
         )
 
+    latency_ms = estimate_latency(start_time, time.perf_counter())
+
     return JSONResponse(
         content={
-            "provider": result.get("provider", provider_name),
-            "model": result.get("model", model_name),
-            "text": result.get("normalized_text", normalize_arabic(request.text)),
-            "script": result.get("script", detect_script(request.text)),
-            "is_safe": result.get("is_safe", False),
-            "injection_detected": result.get("injection_detected", False),
-            "intent": result.get("intent", intent_rules.DEFAULT_INTENT),
-            "intent_confidence": result.get("intent_confidence", 0.0),
-            "order_id": result.get("order_id"),
-            "routed_team": result.get("routed_team", "Auto Response"),
-            "requires_human": result.get("requires_human", False),
-            "answer": result["answer"],
+        "intent": result.get("intent", intent_rules.DEFAULT_INTENT),
+        "intent_confidence": result.get("intent_confidence", 0.0),
+        "urgency": result.get("escalation_priority") or "low",
+        "entities": _build_entities(
+            result.get("order_id"),
+            result.get("order"),
+        ),
+        "requires_human": result.get("requires_human", False),
+        "routed_team": result.get("routed_team", "Auto Response"),
+        "draft_response_ar": result.get("draft_response_ar", result.get("answer", "")),
+        "reasoning_trace": _build_reasoning_trace(result),
+        "tools_used": _build_tools_used(result),
+        "latency_ms": latency_ms,
+        "est_cost_usd": estimate_cost(int(result.get("input_tokens", 0) or 0), int(result.get("output_tokens", 0) or 0)),
         }
     )

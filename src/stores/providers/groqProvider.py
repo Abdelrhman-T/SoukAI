@@ -91,7 +91,17 @@ class groqProvider(LLMInterface):
             self.logger.error("Error while generating text with qroq")
             return None
 
-        return response.choices[0].message.content
+        usage = getattr(response, "usage", None)
+
+        return {
+            "text": response.choices[0].message.content,
+            "usage": {
+                "input_tokens": getattr(usage, "prompt_tokens", 0) if usage else 0,
+                "output_tokens": getattr(usage, "completion_tokens", 0)
+                if usage
+                else 0,
+            },
+        }
 
     def embed_text(self, text: Union[str, List[str]], document_type=None):
         raise ValueError("There no embed_text in qroq")

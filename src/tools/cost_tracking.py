@@ -1,12 +1,13 @@
-from helpers.config import Settings
+from helpers.config import Settings, getSettings
 
+settings = getSettings()
 
 def estimate_cost(input_tokens: int, output_tokens: int) -> float:
     
-    if Settings.GENERATION_BACKEND == "GROQ":
-        pricing = [Settings.GROQ_INPUT_PER_1K, Settings.GROQ_OUTPUT_PER_1K]
-    elif Settings.GENERATION_BACKEND == "OPENROUTER":
-        pricing = [Settings.OPENROUTER_INPUT_PER_1K, Settings.OPENROUTER_OUTPUT_PER_1K]
+    if settings.GENERATION_BACKEND == "GROQ":
+        pricing = [settings.GROQ_INPUT_PER_1K, settings.GROQ_OUTPUT_PER_1K]
+    elif settings.GENERATION_BACKEND == "OPENROUTER":
+        pricing = [settings.OPENROUTER_INPUT_PER_1K, settings.OPENROUTER_OUTPUT_PER_1K]
     else:
         pricing = [0.0,0.0]
     return round(

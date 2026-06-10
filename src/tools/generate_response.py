@@ -1,6 +1,7 @@
 import json
 import logging
 import re
+from collections.abc import Mapping
 
 from pydantic import BaseModel, field_validator
 
@@ -9,6 +10,25 @@ from stores.LLMProviderFactory import LLMProviderFactory
 
 logger = logging.getLogger(__name__)
 JSON_BLOCK_RE = re.compile(r"\{.*\}", re.DOTALL)
+
+
+def _normalize_provider_response(answer):
+    if isinstance(answer, Mapping):
+        text = str(answer.get("text", "")).strip()
+        usage = answer.get("usage", {})
+        if not isinstance(usage, Mapping):
+            usage = {}
+        return {
+            "text": text,
+            "input_tokens": int(usage.get("input_tokens", 0) or 0),
+            "output_tokens": int(usage.get("output_tokens", 0) or 0),
+        }
+
+    return {
+        "text": str(answer or "").strip(),
+        "input_tokens": 0,
+        "output_tokens": 0,
+    }
 
 
 class Prompt(BaseModel):
@@ -76,14 +96,18 @@ def llm_response(
             f"{provider_name} request failed."
         ) from exc
 
-    if not answer or not str(answer).strip():
+    normalized_answer = _normalize_provider_response(answer)
+
+    if not normalized_answer["text"]:
         raise EmptyResponseError(
             f"{provider_name} returned an empty response."
         )
 
     return {
         "provider": provider_name,
-        "answer": answer,
+        "answer": normalized_answer["text"],
+        "input_tokens": normalized_answer["input_tokens"],
+        "output_tokens": normalized_answer["output_tokens"],
     }
 
 
@@ -156,4 +180,6 @@ def draft_response(
         "response": parsed_payload["response"],
         "priority": parsed_payload["priority"],
         "reason": parsed_payload["reason"],
+        "input_tokens": raw_response.get("input_tokens", 0),
+        "output_tokens": raw_response.get("output_tokens", 0),
     }
