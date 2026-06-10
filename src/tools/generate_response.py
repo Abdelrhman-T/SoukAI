@@ -82,3 +82,32 @@ def llm_response(
         "provider": provider_name,
         "answer": answer,
     }
+
+
+def draft_response(
+    intent: str,
+    context: str,
+    *,
+    provider_name: str,
+    app_settings: Settings,
+    sys_prompt: str = "",
+):
+    if not context or not context.strip():
+        raise PromptValidationError("`context` must not be empty.")
+
+    prompt_sections = []
+
+    if intent and intent.strip():
+        prompt_sections.append(f"النية المصنفة: {intent.strip()}")
+
+    prompt_sections.append(f"السياق:\n{context.strip()}")
+    prompt_sections.append("اكتب ردا عربيا قصيرا ومفيدا للعميل.")
+
+    return llm_response(
+        provider_name=provider_name,
+        prompt=Prompt(
+            sys_prompt=sys_prompt,
+            user_prompt="\n".join(prompt_sections),
+        ),
+        app_settings=app_settings,
+    )

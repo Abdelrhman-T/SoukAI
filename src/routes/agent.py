@@ -13,9 +13,9 @@ from prompts.system_prompt import sys_prompt
 from stores.LLMEnums import LLMEnums
 from tools.arabic_utils import detect_script, normalize_arabic
 from tools.classification import classify_intent
-from tools.generate_response import (EmptyResponseError, Prompt,
+from tools.generate_response import (EmptyResponseError,
                                      ProviderInitializationError,
-                                     ResponseGenerationError, llm_response)
+                                     ResponseGenerationError, draft_response)
 from tools.retrieval import extract_order_id, lookup_order, search_kb
 from tools.safety import detect_prompt_injection, profanity_filter
 from tools.validation import is_empty, is_long
@@ -112,9 +112,9 @@ def _extract_order_id(state: AgentState) -> AgentState:
     order_id = extract_order_id(state["normalized_text"])
     if not order_id:
         return {
-        "order_id": None,
-        "routed_team": "Auto Response",
-        "requires_human": False
+            "order_id": None,
+            "routed_team": "Auto Response",
+            "requires_human": False,
         }
     return {
         "order_id": extract_order_id(state["normalized_text"]),
@@ -127,8 +127,8 @@ def _lookup_order(state: AgentState) -> AgentState:
         return {
             "order": None,
             "routed_team": "Auto Response",
-            "requires_human": False
-            }
+            "requires_human": False,
+        }
 
     return {
         "order": lookup_order(order_id),
@@ -154,10 +154,10 @@ def _search_kb(state: AgentState) -> AgentState:
 
     if not state["order_id"]:
         return {
-        "kb_matches": kb_matches,
-        "routed_team": "Auto Response",
-        "requires_human": False,
-    }
+            "kb_matches": kb_matches,
+            "routed_team": "Auto Response",
+            "requires_human": False,
+        }
 
     return {
         "kb_matches": kb_matches,
@@ -191,40 +191,25 @@ def _answer(state: AgentState) -> AgentState:
             "answer": ORDER_NOT_FOUND_MESSAGE,
         }
 
-    kb_context = ""
+    context_parts = [f"رسالة العميل:\n{state['normalized_text']}"]
+
     if state.get("kb_matches"):
         kb_item = state["kb_matches"][0]
-        kb_context = (
-            f"\nالتوجيه الافتراضي: {state.get('routed_team', 'Auto Response')}\n"
-            f"مرجع السياسة: {kb_item.get('title_ar', '')}\n"
-            f"محتوى السياسة: {kb_item.get('content_ar', '')}\n"
+        context_parts.append(
+            (
+                "المعرفة المسترجعة:\n"
+                f"التوجيه الافتراضي: {state.get('routed_team', 'Auto Response')}\n"
+                f"مرجع السياسة: {kb_item.get('title_ar', '')}\n"
+                f"محتوى السياسة: {kb_item.get('content_ar', '')}"
+            )
         )
 
-    order_context = ""
-    if state.get("order"):
-        order = state["order"]
-        order_context = (
-            f"\nرقم الطلب: {order.get('order_id')}\n"
-            f"حالة الحجز: {order.get('booking_status')}\n"
-            f"حالة الغرفة: {order.get('room_assignment_status')}\n"
-            f"حالة الدفع: {order.get('payment_status')}\n"
-            f"اسم الفندق: {order.get('hotel_name')}\n"
-            f"المدينة: {order.get('hotel_city')}\n"
-        )
-
-    response = llm_response(
+    response = draft_response(
+        intent=state.get("intent", intent_rules.DEFAULT_INTENT),
+        context="\n\n".join(context_parts),
         provider_name=provider_name,
-        prompt=Prompt(
-            sys_prompt=sys_prompt,
-            user_prompt=(
-                f"رسالة العميل:\n{state['normalized_text']}\n"
-                f"النية المصنفة: {state.get('intent', intent_rules.DEFAULT_INTENT)}\n"
-                f"{order_context}"
-                f"{kb_context}"
-                f"\nاكتب ردا عربيا قصيرا ومفيدا للعميل."
-            ),
-        ),
         app_settings=state["app_settings"],
+        sys_prompt=sys_prompt,
     )
 
     return {
