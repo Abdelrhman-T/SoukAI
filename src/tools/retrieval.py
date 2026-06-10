@@ -3,7 +3,6 @@ import re
 from pathlib import Path
 
 from tools.arabic_utils import normalize_arabic
-from tools.classification import classify_intent
 
 ORDER_RE = re.compile(
     r"ORD[-_]?(\d{4,10})|(?:رقم\s*الطلب|كود\s*الطلب|الطلب|الرقم)\s*[:#-]?\s*(\d{4,10})",
@@ -41,9 +40,8 @@ def lookup_order(order_id):
         if not isinstance(order, dict):
             continue
 
-        candidate_ids = order.get("order_id", None),
-
-        if candidate_ids:
+        candidate_id = order.get("order_id")
+        if str(candidate_id) == str(order_id):
             return order
 
     return None
@@ -54,11 +52,11 @@ def _load_json(path: Path):
         return json.load(file)
 
 
-def search_kb(query):
-    if not query:
+def search_kb(query, intent):
+    if not query or not intent:
         return []
+
     norm_query = normalize_arabic(query)
-    intent = classify_intent(norm_query)
 
     knowledge_base = _load_json(KB_DB_PATH)
 
