@@ -39,6 +39,7 @@ class AgentState(TypedDict, total=False):
     injection_detected: bool
     blocked_reason: Optional[str]
     intent: str
+    intent_confidence: float
     order_id: Optional[str]
     order: Optional[dict[str, Any]]
     kb_matches: list[dict[str, Any]]
@@ -102,12 +103,13 @@ def _safety_check(state: AgentState) -> AgentState:
 
 def _classify_intent(state: AgentState) -> AgentState:
     if not state.get("is_safe", False):
-        return {"intent": intent_rules.DEFAULT_INTENT}
-
-    return {
-        "intent": classify_intent(
+        return {"intent": intent_rules.DEFAULT_INTENT, "intent_confidence" : 0.0}
+    intent, intent_confidence = classify_intent(
             state["normalized_text"],
         )
+    return {
+        "intent": intent,
+        "intent_confidence" : intent_confidence
     }
 
 
@@ -305,6 +307,7 @@ async def answer_with_agent(
             "is_safe": result.get("is_safe", False),
             "injection_detected": result.get("injection_detected", False),
             "intent": result.get("intent", intent_rules.DEFAULT_INTENT),
+            "intent_confidence": result.get("intent_confidence", 0.0),
             "order_id": result.get("order_id"),
             "routed_team": result.get("routed_team", "Auto Response"),
             "requires_human": result.get("requires_human", False),
