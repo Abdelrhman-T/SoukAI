@@ -10,12 +10,15 @@ from ..LLMInterface import LLMInterface
 class groqProvider(LLMInterface):
     def __init__(
         self,
+        enum,
         api_key: str,
         default_input_max_characters: int = 1000,
         default_generation_max_output_tokens: int = 1000,
         default_generation_temperature: float = 0.1,
     ):
         self.api_key = api_key
+
+        self.enum = enum
 
         self.default_input_max_characters = default_input_max_characters
         self.default_generation_max_output_tokens = default_generation_max_output_tokens

@@ -1,4 +1,5 @@
 import logging
+from enum import Enum
 from typing import List, Union
 
 from openai import OpenAI
@@ -10,6 +11,7 @@ from ..LLMInterface import LLMInterface
 class openrouterProvider(LLMInterface):
     def __init__(
         self,
+        enum,
         api_key: str,
         api_url: str = "",
         default_input_max_characters: int = 1000,
@@ -18,6 +20,8 @@ class openrouterProvider(LLMInterface):
     ):
         self.api_key = api_key
         self.api_url = api_url
+
+        self.enum = enum
 
         self.default_input_max_characters = default_input_max_characters
         self.default_generation_max_output_tokens = default_generation_max_output_tokens

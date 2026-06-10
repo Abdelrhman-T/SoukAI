@@ -1,6 +1,6 @@
 from helpers.config import Settings
 
-from .LLMEnums import LLMEnums
+from .LLMEnums import LLMEnums, openrouterEnums, qroqEnums
 from .providers import groqProvider, openrouterProvider
 
 
@@ -15,6 +15,7 @@ class LLMProviderFactory:
                 default_input_max_characters=self.config.DEFAULT_INPUT_MAX_CHARACTERS,
                 default_generation_max_output_tokens=self.config.DEFAULT_MAX_OUTPUT_TOKENS,
                 default_generation_temperature=self.config.DEFAULT_TEMPERATURE,
+                enum = qroqEnums
             )
             provider.set_generation_model(self.config.GROQ_MODEL)
             return provider
@@ -25,6 +26,7 @@ class LLMProviderFactory:
                 default_generation_max_output_tokens=self.config.DEFAULT_MAX_OUTPUT_TOKENS,
                 default_generation_temperature=self.config.DEFAULT_TEMPERATURE,
                 api_url=self.config.OPENROUTER_URL,
+                enum = openrouterEnums
             )
             provider.set_generation_model(self.config.OPENROUTER_MODEL)
             return provider
