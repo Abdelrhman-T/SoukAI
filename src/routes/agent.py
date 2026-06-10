@@ -232,6 +232,20 @@ def _answer(state: AgentState) -> AgentState:
     }
 
 
+def _resolve_generation_target(app_settings: Settings) -> tuple[str, str]:
+    backend = app_settings.GENERATION_BACKEND.upper()
+
+    if backend == LLMEnums.GROQ.value:
+        return LLMEnums.GROQ.value, app_settings.GROQ_MODEL
+
+    if backend == LLMEnums.OPENROUTER.value:
+        return LLMEnums.OPENROUTER.value, app_settings.OPENROUTER_MODEL
+
+    raise ProviderInitializationError(
+        f"Unsupported generation backend: {app_settings.GENERATION_BACKEND}"
+    )
+
+
 @lru_cache(maxsize=1)
 def _graph_factory() -> Any:
     workflow = StateGraph(AgentState)
@@ -261,13 +275,14 @@ async def answer_with_agent(
     app_settings: Settings = Depends(getSettings),
 ):
     graph = _graph_factory()
+    provider_name, model_name = _resolve_generation_target(app_settings)
 
     try:
         result = graph.invoke(
             {
                 "text": request.text,
-                "provider": LLMEnums.GROQ.value,
-                "model": app_settings.GROQ_MODEL,
+                "provider": provider_name,
+                "model": model_name,
                 "max_input_characters": app_settings.DEFAULT_INPUT_MAX_CHARACTERS,
                 "app_settings": app_settings,
             }
@@ -297,8 +312,8 @@ async def answer_with_agent(
 
     return JSONResponse(
         content={
-            "provider": result.get("provider", LLMEnums.GROQ.value),
-            "model": result.get("model", app_settings.GROQ_MODEL),
+            "provider": result.get("provider", provider_name),
+            "model": result.get("model", model_name),
             "text": result.get("normalized_text", normalize_arabic(request.text)),
             "script": result.get("script", detect_script(request.text)),
             "is_safe": result.get("is_safe", False),
