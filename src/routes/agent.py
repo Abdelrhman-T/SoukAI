@@ -207,16 +207,16 @@ def _answer(state: AgentState) -> AgentState:
             "output_tokens": 0,
         }
 
-    context_parts = [f"رسالة العميل:\n{state['normalized_text']}"]
+    context_parts = [f"Customer message:\n{state['normalized_text']}"]
 
     if state.get("kb_matches"):
         kb_item = state["kb_matches"][0]
         context_parts.append(
             (
-                "المعرفة المسترجعة:\n"
-                f"التوجيه الافتراضي: {state.get('routed_team', 'Auto Response')}\n"
-                f"مرجع السياسة: {kb_item.get('title_ar', '')}\n"
-                f"محتوى السياسة: {kb_item.get('content_ar', '')}"
+                "knowledge Base:\n"
+                f"Routed Team: {state.get('routed_team', 'Auto Response')}\n"
+                f"Policy Title: {kb_item.get('title_ar', '')}\n"
+                f"Policy Content: {kb_item.get('content_ar', '')}"
             )
         )
 
@@ -261,23 +261,23 @@ def _build_entities(order_id: Optional[str], order: Optional[dict[str, Any]]) ->
 
 def _build_reasoning_trace(result: AgentState) -> list[str]:
     trace = [
-        f"normalized_input_script={result.get('script', 'unknown')}",
-        f"safety_check={'passed' if result.get('is_safe') else 'blocked'}",
-        f"intent={result.get('intent', intent_rules.DEFAULT_INTENT)} confidence={result.get('intent_confidence', 0.0)}",
+        f"normalized_input_script= {result.get('script', 'unknown')}",
+        f"safety_check= {'passed' if result.get('is_safe') else 'blocked'}",
+        f"intent= {result.get('intent', intent_rules.DEFAULT_INTENT)} confidence={result.get('intent_confidence', 0.0)}",
     ]
 
     if result.get("order_id"):
-        trace.append(f"order_lookup=matched:{result['order_id']}" if result.get("order") else f"order_lookup=not_found:{result['order_id']}")
+        trace.append(f"order_lookup= matched:{result['order_id']}" if result.get("order") else f"order_lookup=not_found:{result['order_id']}")
     else:
-        trace.append("order_lookup=missing_order_id")
+        trace.append("order_lookup= missing_order_id")
 
     trace.append(
-        f"routing={result.get('routed_team', 'Auto Response')} human_required={result.get('requires_human', False)}"
+        f"routing={result.get('routed_team', 'Auto Response')} human_required= {result.get('requires_human', False)}"
     )
 
     if result.get("escalation_priority"):
         trace.append(
-            f"urgency={result.get('escalation_priority')} reason={result.get('escalation_reason', '')}".strip()
+            f"urgency= {result.get('escalation_priority')} reason= {result.get('escalation_reason', '')}".strip()
         )
 
     return trace
