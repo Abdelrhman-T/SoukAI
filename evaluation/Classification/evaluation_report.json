@@ -1,0 +1,108 @@
+{
+    "total_samples": 71,
+    "intent": {
+        "accuracy": 0.5915,
+        "per_class": {
+            "delivery_issue": {
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6667,
+                "support": 2
+            },
+            "other": {
+                "precision": 0.8571,
+                "recall": 0.5455,
+                "f1": 0.6667,
+                "support": 11
+            },
+            "payment_issue": {
+                "precision": 0.3333,
+                "recall": 1.0,
+                "f1": 0.5,
+                "support": 1
+            },
+            "positive_feedback": {
+                "precision": 0.875,
+                "recall": 0.2692,
+                "f1": 0.4118,
+                "support": 26
+            },
+            "product_quality": {
+                "precision": 0.5417,
+                "recall": 0.8966,
+                "f1": 0.6753,
+                "support": 29
+            },
+            "refund_request": {
+                "precision": 0.25,
+                "recall": 0.5,
+                "f1": 0.3333,
+                "support": 2
+            }
+        },
+        "weighted_avg": {
+            "precision": 0.7144,
+            "recall": 0.5916,
+            "f1": 0.5651
+        },
+        "confusion_matrix": {
+            "delivery_issue": {
+                "delivery_issue": 1,
+                "other": 0,
+                "payment_issue": 0,
+                "positive_feedback": 0,
+                "product_quality": 1,
+                "refund_request": 0
+            },
+            "other": {
+                "delivery_issue": 0,
+                "other": 6,
+                "payment_issue": 0,
+                "positive_feedback": 1,
+                "product_quality": 3,
+                "refund_request": 1
+            },
+            "payment_issue": {
+                "delivery_issue": 0,
+                "other": 0,
+                "payment_issue": 1,
+                "positive_feedback": 0,
+                "product_quality": 0,
+                "refund_request": 0
+            },
+            "positive_feedback": {
+                "delivery_issue": 0,
+                "other": 0,
+                "payment_issue": 1,
+                "positive_feedback": 7,
+                "product_quality": 18,
+                "refund_request": 0
+            },
+            "product_quality": {
+                "delivery_issue": 0,
+                "other": 1,
+                "payment_issue": 0,
+                "positive_feedback": 0,
+                "product_quality": 26,
+                "refund_request": 2
+            },
+            "refund_request": {
+                "delivery_issue": 0,
+                "other": 0,
+                "payment_issue": 1,
+                "positive_feedback": 0,
+                "product_quality": 0,
+                "refund_request": 1
+            }
+        }
+    },
+    "urgency": {
+        "accuracy": 0.4225
+    },
+    "requires_human": {
+        "accuracy": 0.6479
+    },
+    "routed_team": {
+        "accuracy": 0.5775
+    }
+}

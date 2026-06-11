@@ -1,0 +1,18 @@
+{
+  "total_cases": 71,
+  "passed": 52,
+  "failed": 19,
+  "average_overall_score": 4.08,
+  "average_correctness": 4.08,
+  "average_helpfulness": 3.69,
+  "average_dialect_match": 3.83,
+  "average_tone": 4.72,
+  "failure_category_counts": {
+    "none": 52,
+    "generic_response": 8,
+    "incorrect_answer": 3,
+    "missed_escalation": 1,
+    "unsupported_promise": 3,
+    "wrong_dialect": 4
+  }
+}
