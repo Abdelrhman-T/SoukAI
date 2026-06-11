@@ -27,7 +27,9 @@ def classify_intent(text: str):
         if ratio > best_score:
             best_intent = intent
             best_score = ratio
-
-    confidence = (best_score/ sum(scores))*100 
+    try: 
+        confidence = (best_score/ sum(scores))*100 
+    except ZeroDivisionError:
+        confidence = 0
 
     return best_intent, round(confidence, 1)
