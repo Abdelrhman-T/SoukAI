@@ -1,5 +1,4037 @@
 [
   {
+    "order_id": 166,
+    "booking_id": "BK-166",
+    "customer_name": "سارة العتيبي",
+    "hotel_name": "فندق 72",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة ديلوكس مزدوجة أو توأم",
+    "stay_description": "أقمت ليلتين",
+    "nights": 1,
+    "check_in": "2024-12-15",
+    "check_out": "2024-12-16",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 790,
+    "currency": "SAR",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-166-A",
+        "type": "capture",
+        "amount": 790,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "تسجيل وصول مبكر عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 492,
+    "booking_id": "BK-492",
+    "customer_name": "فاطمة الزهراني",
+    "hotel_name": "فندق 72",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة ديلوكس مزدوجة أو توأم",
+    "stay_description": "أقمت ليلتين",
+    "nights": 1,
+    "check_in": "2024-07-29",
+    "check_out": "2024-07-30",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 749,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-492-A",
+        "type": "capture",
+        "amount": 749,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "semi_flexible",
+      "free_cancellation_until_hours_before_checkin": 24,
+      "refund_processing_days": "5-10 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "تسجيل وصول مبكر عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 2368,
+    "booking_id": "BK-2368",
+    "customer_name": "دلال الشهري",
+    "hotel_name": "أداجيو أبوظبي البستان",
+    "hotel_city": "دبي",
+    "room_type": "شقة من غرفة نوم واحدة",
+    "stay_description": "أقمت 4 ليالي",
+    "nights": 4,
+    "check_in": "2025-03-07",
+    "check_out": "2025-03-11",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 1344,
+    "currency": "AED",
+    "payment_method": "الدفع عند الوصول",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-2368-A",
+        "type": "capture",
+        "amount": 1344,
+        "currency": "AED",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "سرير إضافي عند التوفر",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 2618,
+    "booking_id": "BK-2618",
+    "customer_name": "أميرة الحبيب",
+    "hotel_name": "اداجيو بريميوم البرشاء",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-06-21",
+    "check_out": "2025-06-22",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 599,
+    "currency": "SAR",
+    "payment_method": "الدفع عند الوصول",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-2618-A",
+        "type": "capture",
+        "amount": 599,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "semi_flexible",
+      "free_cancellation_until_hours_before_checkin": 24,
+      "refund_processing_days": "5-10 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "إفطار مبكر",
+      "غرفة عالية"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 3049,
+    "booking_id": "BK-3049",
+    "customer_name": "ماجد الصاعدي",
+    "hotel_name": "فندق عفراء",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة ثلاثية",
+    "stay_description": "أقمت ليلتين",
+    "nights": 1,
+    "check_in": "2024-10-21",
+    "check_out": "2024-10-22",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 271,
+    "currency": "SAR",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-3049-A",
+        "type": "capture",
+        "amount": 271,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "سرير إضافي عند التوفر",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 3056,
+    "booking_id": "BK-3056",
+    "customer_name": "خالد الدوسري",
+    "hotel_name": "Africana Hotel",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة مزدوجة",
+    "stay_description": "أقمت 4 ليالي",
+    "nights": 4,
+    "check_in": "2025-04-17",
+    "check_out": "2025-04-21",
+    "guests": {
+      "adults": 2,
+      "children": 1
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 1776,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-3056-A",
+        "type": "capture",
+        "amount": 1776,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة غير مدخنين",
+      "طابق هادئ"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 4021,
+    "booking_id": "BK-4021",
+    "customer_name": "فاطمة الزهراني",
+    "hotel_name": "فندق أجياد كروم",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2024-12-22",
+    "check_out": "2024-12-23",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 449,
+    "currency": "SAR",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-4021-A",
+        "type": "capture",
+        "amount": 449,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": false,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة غير مدخنين",
+      "طابق هادئ"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 4092,
+    "booking_id": "BK-4092",
+    "customer_name": "خالد الدوسري",
+    "hotel_name": "فندق أجياد كروم",
+    "hotel_city": "مكة",
+    "room_type": "غرفة مفردة",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-05-04",
+    "check_out": "2025-05-05",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 286,
+    "currency": "SAR",
+    "payment_method": "الدفع عند الوصول",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-4092-A",
+        "type": "capture",
+        "amount": 286,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة غير مدخنين",
+      "طابق هادئ"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 4741,
+    "booking_id": "BK-4741",
+    "customer_name": "رنا الجهني",
+    "hotel_name": "فندق مكارم أجياد مكة",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية مزدوجة",
+    "stay_description": "أقمت ليلتين",
+    "nights": 1,
+    "check_in": "2025-05-16",
+    "check_out": "2025-05-17",
+    "guests": {
+      "adults": 1,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 455,
+    "currency": "SAR",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-4741-A",
+        "type": "capture",
+        "amount": 455,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة بإطلالة",
+      "حمام مع بانيو"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 4955,
+    "booking_id": "BK-4955",
+    "customer_name": "عبدالله المطيري",
+    "hotel_name": "فندق مكارم أجياد مكة",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية مزدوجة",
+    "stay_description": "أقمت ليلتين",
+    "nights": 1,
+    "check_in": "2024-08-10",
+    "check_out": "2024-08-11",
+    "guests": {
+      "adults": 2,
+      "children": 1
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 354,
+    "currency": "SAR",
+    "payment_method": "الدفع عند الوصول",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-4955-A",
+        "type": "capture",
+        "amount": 354,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة بإطلالة",
+      "حمام مع بانيو"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 6958,
+    "booking_id": "BK-6958",
+    "customer_name": "أميرة الحبيب",
+    "hotel_name": "فندق ميلينيوم العقيق المدينة",
+    "hotel_city": "دبي",
+    "room_type": "غرفة قياسية كينغ",
+    "stay_description": "أقمت 12 ليلة",
+    "nights": 12,
+    "check_in": "2025-05-21",
+    "check_out": "2025-06-02",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 6588,
+    "currency": "AED",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-6958-A",
+        "type": "capture",
+        "amount": 6588,
+        "currency": "AED",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "semi_flexible",
+      "free_cancellation_until_hours_before_checkin": 24,
+      "refund_processing_days": "5-10 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "إفطار مبكر",
+      "غرفة عالية"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 9357,
+    "booking_id": "BK-9357",
+    "customer_name": "عبدالله المطيري",
+    "hotel_name": "فندق الديار مينا",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة قياسية مزدوجة",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2024-07-08",
+    "check_out": "2024-07-09",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 750,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-9357-A",
+        "type": "capture",
+        "amount": 750,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة بإطلالة",
+      "حمام مع بانيو"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 11073,
+    "booking_id": "BK-11073",
+    "customer_name": "ريم السلمي",
+    "hotel_name": "الغرير ريحان من روتانا - دبي",
+    "hotel_city": "دبي",
+    "room_type": "غرفة توأم كلاسيكية",
+    "stay_description": "أقمت 4 ليالي",
+    "nights": 4,
+    "check_in": "2025-06-16",
+    "check_out": "2025-06-20",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 3464,
+    "currency": "AED",
+    "payment_method": "الدفع عند الوصول",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-11073-A",
+        "type": "capture",
+        "amount": 3464,
+        "currency": "AED",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "مناسبة خاصة - عيد ميلاد",
+      "تزيين الغرفة"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 12937,
+    "booking_id": "BK-12937",
+    "customer_name": "يوسف القحطاني",
+    "hotel_name": "منتجع قصر الحمرا الشاطئي",
+    "hotel_city": "الرياض",
+    "room_type": "جناح من غرفة نوم واحدة",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2024-06-14",
+    "check_out": "2024-06-15",
+    "guests": {
+      "adults": 2,
+      "children": 1
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 519,
+    "currency": "SAR",
+    "payment_method": "بطاقة بنكية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-12937-A",
+        "type": "capture",
+        "amount": 519,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "مناسبة خاصة - عيد ميلاد",
+      "تزيين الغرفة"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 14201,
+    "booking_id": "BK-14201",
+    "customer_name": "خالد الدوسري",
+    "hotel_name": "فندق الحرم – الروضة",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية رباعية",
+    "stay_description": "أقمت 3 ليالي",
+    "nights": 3,
+    "check_in": "2024-08-19",
+    "check_out": "2024-08-22",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 1260,
+    "currency": "SAR",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-14201-A",
+        "type": "capture",
+        "amount": 1260,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "مناسبة خاصة - عيد ميلاد",
+      "تزيين الغرفة"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 14749,
+    "booking_id": "BK-14749",
+    "customer_name": "ياسمين عادل",
+    "hotel_name": "فندق الحياة جدة كونتيننتال",
+    "hotel_city": "القاهرة",
+    "room_type": null,
+    "stay_description": "-",
+    "nights": 1,
+    "check_in": "2025-05-01",
+    "check_out": "2025-05-02",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "confirmed_pending_room_assignment",
+    "room_assignment_status": "not_assigned_yet",
+    "payment_status": "paid",
+    "total_amount": 360,
+    "currency": "EGP",
+    "payment_method": "الدفع عند الوصول",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-14749-A",
+        "type": "capture",
+        "amount": 360,
+        "currency": "EGP",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "حسب موافقة الفندق"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "سرير إضافي عند التوفر",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 16038,
+    "booking_id": "BK-16038",
+    "customer_name": "فاطمة الزهراني",
+    "hotel_name": "فندق الجوهرة مترو",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة ديلوكس",
+    "stay_description": "أقمت 3 ليالي",
+    "nights": 3,
+    "check_in": "2024-10-03",
+    "check_out": "2024-10-06",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 2052,
+    "currency": "SAR",
+    "payment_method": "بطاقة بنكية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-16038-A",
+        "type": "capture",
+        "amount": 2052,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة بإطلالة",
+      "حمام مع بانيو"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 16919,
+    "booking_id": "BK-16919",
+    "customer_name": "سلطان البقمي",
+    "hotel_name": "فندق الصفوة رويال اوركيد",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت 3 ليالي",
+    "nights": 3,
+    "check_in": "2025-08-17",
+    "check_out": "2025-08-20",
+    "guests": {
+      "adults": 1,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 765,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-16919-A",
+        "type": "capture",
+        "amount": 765,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة بإطلالة",
+      "حمام مع بانيو"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 17473,
+    "booking_id": "BK-17473",
+    "customer_name": "سلطان البقمي",
+    "hotel_name": "فندق الصفوة رويال اوركيد",
+    "hotel_city": "مكة",
+    "room_type": "غرفة رباعية مع إطلالة جانبية على الحرم الشريف",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-07-11",
+    "check_out": "2025-07-12",
+    "guests": {
+      "adults": 1,
+      "children": 1
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 632,
+    "currency": "SAR",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-17473-A",
+        "type": "capture",
+        "amount": 632,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": false,
+      "parking_included": true,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "تسجيل وصول مبكر عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 17605,
+    "booking_id": "BK-17605",
+    "customer_name": "تركي الحربي",
+    "hotel_name": "فندق الصفوة رويال اوركيد",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية مزدوجة تطل جانبياً على الحرم.",
+    "stay_description": "أقمت 4 ليالي",
+    "nights": 4,
+    "check_in": "2025-07-26",
+    "check_out": "2025-07-30",
+    "guests": {
+      "adults": 2,
+      "children": 1
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 928,
+    "currency": "SAR",
+    "payment_method": "بطاقة بنكية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-17605-A",
+        "type": "capture",
+        "amount": 928,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة بإطلالة",
+      "حمام مع بانيو"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 19234,
+    "booking_id": "BK-19234",
+    "customer_name": "فاطمة الزهراني",
+    "hotel_name": "فندق المدينة هارموني",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية مزدوجة",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-04-03",
+    "check_out": "2025-04-04",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 531,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-19234-A",
+        "type": "capture",
+        "amount": 531,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "semi_flexible",
+      "free_cancellation_until_hours_before_checkin": 24,
+      "refund_processing_days": "5-10 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة غير مدخنين",
+      "طابق هادئ"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 19446,
+    "booking_id": "BK-19446",
+    "customer_name": "أميرة الحبيب",
+    "hotel_name": "فندق المدينة هارموني",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية مزدوجة",
+    "stay_description": "أقمت ليلتين",
+    "nights": 1,
+    "check_in": "2024-11-17",
+    "check_out": "2024-11-18",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 272,
+    "currency": "SAR",
+    "payment_method": "الدفع عند الوصول",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-19446-A",
+        "type": "capture",
+        "amount": 272,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": false,
+      "parking_included": false,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة بإطلالة",
+      "حمام مع بانيو"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 19772,
+    "booking_id": "BK-19772",
+    "customer_name": "سلطان البقمي",
+    "hotel_name": "فندق المدينة هارموني",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت 3 ليالي",
+    "nights": 3,
+    "check_in": "2025-03-11",
+    "check_out": "2025-03-14",
+    "guests": {
+      "adults": 2,
+      "children": 1
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 990,
+    "currency": "SAR",
+    "payment_method": "الدفع عند الوصول",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-19772-A",
+        "type": "capture",
+        "amount": 990,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "إفطار مبكر",
+      "غرفة عالية"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 19810,
+    "booking_id": "BK-19810",
+    "customer_name": "سلطان البقمي",
+    "hotel_name": "فندق المدينة هارموني",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية مزدوجة",
+    "stay_description": "أقمت ليلتين",
+    "nights": 1,
+    "check_in": "2025-06-09",
+    "check_out": "2025-06-10",
+    "guests": {
+      "adults": 2,
+      "children": 1
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 450,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-19810-A",
+        "type": "capture",
+        "amount": 450,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": false,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "سرير إضافي عند التوفر",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 19967,
+    "booking_id": "BK-19967",
+    "customer_name": "إبراهيم السالم",
+    "hotel_name": "فندق المدينة هارموني",
+    "hotel_city": "الطائف",
+    "room_type": "غرفة قياسية مزدوجة",
+    "stay_description": "أقمت ليلتين",
+    "nights": 2,
+    "check_in": "2025-04-27",
+    "check_out": "2025-04-29",
+    "guests": {
+      "adults": 2,
+      "children": 1
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 930,
+    "currency": "SAR",
+    "payment_method": "بطاقة بنكية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-19967-A",
+        "type": "capture",
+        "amount": 930,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "semi_flexible",
+      "free_cancellation_until_hours_before_checkin": 24,
+      "refund_processing_days": "5-10 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": false,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة غير مدخنين",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 20514,
+    "booking_id": "BK-20514",
+    "customer_name": "راشد الكندي",
+    "hotel_name": "فندق الجاد المحبس",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة توأم كلاسيكية",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-05-26",
+    "check_out": "2025-05-27",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 758,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-20514-A",
+        "type": "capture",
+        "amount": 758,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": false,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "إفطار مبكر",
+      "غرفة عالية"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 21326,
+    "booking_id": "BK-21326",
+    "customer_name": "عبدالرحمن خالد",
+    "hotel_name": "المجاز بريميير للشقق الفندقية",
+    "hotel_city": "المدينة المنورة",
+    "room_type": null,
+    "stay_description": "أقمت 7 ليالي",
+    "nights": 7,
+    "check_in": "2025-04-11",
+    "check_out": "2025-04-18",
+    "guests": {
+      "adults": 1,
+      "children": 1
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 3500,
+    "currency": "SAR",
+    "payment_method": "بطاقة بنكية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-21326-A",
+        "type": "capture",
+        "amount": 3500,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": false,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة غير مدخنين",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 21915,
+    "booking_id": "BK-21915",
+    "customer_name": "راشد الكندي",
+    "hotel_name": "أجنحة المجيدي آراك",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت 3 ليالي",
+    "nights": 3,
+    "check_in": "2025-06-30",
+    "check_out": "2025-07-03",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 999,
+    "currency": "SAR",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-21915-A",
+        "type": "capture",
+        "amount": 999,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "سرير إضافي عند التوفر",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 22050,
+    "booking_id": "BK-22050",
+    "customer_name": "سلطان البقمي",
+    "hotel_name": "أجنحة المجيدي آراك",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت 4 ليالي",
+    "nights": 4,
+    "check_in": "2024-12-30",
+    "check_out": "2025-01-03",
+    "guests": {
+      "adults": 2,
+      "children": 1
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 1052,
+    "currency": "SAR",
+    "payment_method": "بطاقة بنكية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-22050-A",
+        "type": "capture",
+        "amount": 1052,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "إفطار مبكر",
+      "غرفة عالية"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 22778,
+    "booking_id": "BK-22778",
+    "customer_name": "رنا الجهني",
+    "hotel_name": "المنار للشقق الفندقية",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت ليلتين",
+    "nights": 1,
+    "check_in": "2025-05-17",
+    "check_out": "2025-05-18",
+    "guests": {
+      "adults": 1,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 323,
+    "currency": "SAR",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-22778-A",
+        "type": "capture",
+        "amount": 323,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "إفطار مبكر",
+      "غرفة عالية"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 24816,
+    "booking_id": "BK-24816",
+    "customer_name": "هيا البلوي",
+    "hotel_name": "المروة ريحان من روتانا - مكة",
+    "hotel_city": "دبي",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت ليلتين",
+    "nights": 1,
+    "check_in": "2024-06-13",
+    "check_out": "2024-06-14",
+    "guests": {
+      "adults": 2,
+      "children": 1
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 483,
+    "currency": "AED",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-24816-A",
+        "type": "capture",
+        "amount": 483,
+        "currency": "AED",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "سرير إضافي عند التوفر",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 26088,
+    "booking_id": "BK-26088",
+    "customer_name": "راشد الكندي",
+    "hotel_name": "المروة ريحان من روتانا - مكة",
+    "hotel_city": "دبي",
+    "room_type": "غرفة كلاسيكية بسريرين فرديين مطلة على المدينة.",
+    "stay_description": "أقمت ليلتين",
+    "nights": 1,
+    "check_in": "2024-10-14",
+    "check_out": "2024-10-15",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 705,
+    "currency": "AED",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-26088-A",
+        "type": "capture",
+        "amount": 705,
+        "currency": "AED",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة غير مدخنين",
+      "طابق هادئ"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 27466,
+    "booking_id": "BK-27466",
+    "customer_name": "يوسف القحطاني",
+    "hotel_name": "قصر المحمدية للاجنحة الفندقية",
+    "hotel_city": "الرياض",
+    "room_type": "شقة من غرفة نوم واحدة",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2024-11-04",
+    "check_out": "2024-11-05",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 457,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-27466-A",
+        "type": "capture",
+        "amount": 457,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة بإطلالة",
+      "حمام مع بانيو"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 29765,
+    "booking_id": "BK-29765",
+    "customer_name": "سارة العتيبي",
+    "hotel_name": "فندق النباريس الماسي",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة مزدوجة",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-10-09",
+    "check_out": "2025-10-10",
+    "guests": {
+      "adults": 1,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 259,
+    "currency": "SAR",
+    "payment_method": "بطاقة بنكية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-29765-A",
+        "type": "capture",
+        "amount": 259,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": false,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة غير مدخنين",
+      "طابق هادئ"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 30739,
+    "booking_id": "BK-30739",
+    "customer_name": "راشد الكندي",
+    "hotel_name": "فندق شاطئ الراحة",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة ديلوكس توأم مطلة على الخليج",
+    "stay_description": "أقمت ليلتين",
+    "nights": 1,
+    "check_in": "2024-10-25",
+    "check_out": "2024-10-26",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 415,
+    "currency": "SAR",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-30739-A",
+        "type": "capture",
+        "amount": 415,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "semi_flexible",
+      "free_cancellation_until_hours_before_checkin": 24,
+      "refund_processing_days": "5-10 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": false,
+      "parking_included": false,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "سرير إضافي عند التوفر",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 30945,
+    "booking_id": "BK-30945",
+    "customer_name": "وليد الصبيحي",
+    "hotel_name": "فندق شاطئ الراحة",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة ديلوكس كينغ مطلة على الخليج",
+    "stay_description": "أقمت ليلتين",
+    "nights": 1,
+    "check_in": "2025-08-26",
+    "check_out": "2025-08-27",
+    "guests": {
+      "adults": 2,
+      "children": 1
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 661,
+    "currency": "SAR",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-30945-A",
+        "type": "capture",
+        "amount": 661,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "semi_flexible",
+      "free_cancellation_until_hours_before_checkin": 24,
+      "refund_processing_days": "5-10 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة بإطلالة",
+      "حمام مع بانيو"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 31772,
+    "booking_id": "BK-31772",
+    "customer_name": "عبدالله المطيري",
+    "hotel_name": "فندق السفير",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-08-27",
+    "check_out": "2025-08-28",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 669,
+    "currency": "SAR",
+    "payment_method": "الدفع عند الوصول",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-31772-A",
+        "type": "capture",
+        "amount": 669,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": false,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 32487,
+    "booking_id": "BK-32487",
+    "customer_name": "أميرة الحبيب",
+    "hotel_name": "فندق سلام الدار مكه",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة ثلاثية",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-01-05",
+    "check_out": "2025-01-06",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 761,
+    "currency": "SAR",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-32487-A",
+        "type": "capture",
+        "amount": 761,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "semi_flexible",
+      "free_cancellation_until_hours_before_checkin": 24,
+      "refund_processing_days": "5-10 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": false,
+      "parking_included": false,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة بإطلالة",
+      "حمام مع بانيو"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 33982,
+    "booking_id": "BK-33982",
+    "customer_name": "تركي الحربي",
+    "hotel_name": "فندق قصر الواحة",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة سوبيريور",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-08-18",
+    "check_out": "2025-08-19",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 672,
+    "currency": "SAR",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-33982-A",
+        "type": "capture",
+        "amount": 672,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "semi_flexible",
+      "free_cancellation_until_hours_before_checkin": 24,
+      "refund_processing_days": "5-10 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "مناسبة خاصة - عيد ميلاد",
+      "تزيين الغرفة"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 36567,
+    "booking_id": "BK-36567",
+    "customer_name": "سلطان البقمي",
+    "hotel_name": "فندق كروم الخبر",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة سوبيريور مزدوجة",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-10-07",
+    "check_out": "2025-10-08",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 416,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-36567-A",
+        "type": "capture",
+        "amount": 416,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "semi_flexible",
+      "free_cancellation_until_hours_before_checkin": 24,
+      "refund_processing_days": "5-10 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة غير مدخنين",
+      "طابق هادئ"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 37891,
+    "booking_id": "BK-37891",
+    "customer_name": "بدر العلي",
+    "hotel_name": "آلوفت أبوظبي",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة مرتفعة",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-04-19",
+    "check_out": "2025-04-20",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 360,
+    "currency": "SAR",
+    "payment_method": "بطاقة بنكية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-37891-A",
+        "type": "capture",
+        "amount": 360,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "حسب موافقة الفندق"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة غير مدخنين",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 39344,
+    "booking_id": "BK-39344",
+    "customer_name": "نورا الغامدي",
+    "hotel_name": "أمواج سويتس جميرا بيتش ريزيدينس",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت 5 ليالي",
+    "nights": 5,
+    "check_in": "2025-03-04",
+    "check_out": "2025-03-09",
+    "guests": {
+      "adults": 1,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 1075,
+    "currency": "SAR",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-39344-A",
+        "type": "capture",
+        "amount": 1075,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "semi_flexible",
+      "free_cancellation_until_hours_before_checkin": 24,
+      "refund_processing_days": "5-10 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "سرير إضافي عند التوفر",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 40765,
+    "booking_id": "BK-40765",
+    "customer_name": "راشد الكندي",
+    "hotel_name": "فندق أنجم مكة",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-06-11",
+    "check_out": "2025-06-12",
+    "guests": {
+      "adults": 2,
+      "children": 1
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 734,
+    "currency": "SAR",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-40765-A",
+        "type": "capture",
+        "amount": 734,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "إفطار مبكر",
+      "غرفة عالية"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 41399,
+    "booking_id": "BK-41399",
+    "customer_name": "تركي الحربي",
+    "hotel_name": "فندق أنجم مكة",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-08-25",
+    "check_out": "2025-08-26",
+    "guests": {
+      "adults": 2,
+      "children": 1
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 588,
+    "currency": "SAR",
+    "payment_method": "بطاقة بنكية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-41399-A",
+        "type": "capture",
+        "amount": 588,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "semi_flexible",
+      "free_cancellation_until_hours_before_checkin": 24,
+      "refund_processing_days": "5-10 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": false,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "إفطار مبكر",
+      "غرفة عالية"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 42042,
+    "booking_id": "BK-42042",
+    "customer_name": "خديجة علي",
+    "hotel_name": "فندق أنجم مكة",
+    "hotel_city": "جدة",
+    "room_type": "غرفة ديلوكس توأمية مطلة على الحرم",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-04-15",
+    "check_out": "2025-04-16",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 520,
+    "currency": "SAR",
+    "payment_method": "الدفع عند الوصول",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-42042-A",
+        "type": "capture",
+        "amount": 520,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "semi_flexible",
+      "free_cancellation_until_hours_before_checkin": 24,
+      "refund_processing_days": "5-10 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "سرير إضافي عند التوفر",
+      "طابق هادئ"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 42229,
+    "booking_id": "BK-42229",
+    "customer_name": "خالد الدوسري",
+    "hotel_name": "فندق أنوار المدينة موفنبيك",
+    "hotel_city": "مكة",
+    "room_type": "غرفة رباعية سوبيريور",
+    "stay_description": "أقمت ليلتين",
+    "nights": 1,
+    "check_in": "2024-06-23",
+    "check_out": "2024-06-24",
+    "guests": {
+      "adults": 1,
+      "children": 1
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 670,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-42229-A",
+        "type": "capture",
+        "amount": 670,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": false,
+      "parking_included": true,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة غير مدخنين",
+      "طابق هادئ"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 45833,
+    "booking_id": "BK-45833",
+    "customer_name": "خالد الدوسري",
+    "hotel_name": "فندق ميلينيوم طيبة",
+    "hotel_city": "دبي",
+    "room_type": "غرفة ديلوكس مزدوجة أو توأم",
+    "stay_description": "أقمت ليلتين",
+    "nights": 1,
+    "check_in": "2024-06-24",
+    "check_out": "2024-06-25",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 977,
+    "currency": "AED",
+    "payment_method": "الدفع عند الوصول",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-45833-A",
+        "type": "capture",
+        "amount": 977,
+        "currency": "AED",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "مناسبة خاصة - عيد ميلاد",
+      "تزيين الغرفة"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 46666,
+    "booking_id": "BK-46666",
+    "customer_name": "محمد الشمري",
+    "hotel_name": "فندق ميلينيوم طيبة",
+    "hotel_city": "دبي",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت 3 ليالي",
+    "nights": 3,
+    "check_in": "2024-09-23",
+    "check_out": "2024-09-26",
+    "guests": {
+      "adults": 1,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 2895,
+    "currency": "AED",
+    "payment_method": "الدفع عند الوصول",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-46666-A",
+        "type": "capture",
+        "amount": 2895,
+        "currency": "AED",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": false,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "سرير إضافي عند التوفر",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 47194,
+    "booking_id": "BK-47194",
+    "customer_name": "راشد الكندي",
+    "hotel_name": "فندق ميلينيوم طيبة",
+    "hotel_city": "دبي",
+    "room_type": "غرفة ديلوكس ثلاثية",
+    "stay_description": "أقمت 4 ليالي",
+    "nights": 4,
+    "check_in": "2024-08-11",
+    "check_out": "2024-08-15",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 2928,
+    "currency": "AED",
+    "payment_method": "الدفع عند الوصول",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-47194-A",
+        "type": "capture",
+        "amount": 2928,
+        "currency": "AED",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": false,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "تسجيل وصول مبكر عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 47464,
+    "booking_id": "BK-47464",
+    "customer_name": "عبدالله المطيري",
+    "hotel_name": "قصر أرين للوحدات السكنية",
+    "hotel_city": "الرياض",
+    "room_type": "شقة من غرفة نوم واحدة",
+    "stay_description": "أقمت ليلتين",
+    "nights": 1,
+    "check_in": "2024-07-14",
+    "check_out": "2024-07-15",
+    "guests": {
+      "adults": 1,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 697,
+    "currency": "SAR",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-47464-A",
+        "type": "capture",
+        "amount": 697,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة بإطلالة",
+      "حمام مع بانيو"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 48207,
+    "booking_id": "BK-48207",
+    "customer_name": "خالد الدوسري",
+    "hotel_name": "فندق ارماني دبي",
+    "hotel_city": "دبي",
+    "room_type": "غرفة ديلوكس مزدوجة",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-10-05",
+    "check_out": "2025-10-06",
+    "guests": {
+      "adults": 1,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 820,
+    "currency": "AED",
+    "payment_method": "بطاقة بنكية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-48207-A",
+        "type": "capture",
+        "amount": 820,
+        "currency": "AED",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "سرير إضافي عند التوفر",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 50051,
+    "booking_id": "BK-50051",
+    "customer_name": "ريم السلمي",
+    "hotel_name": "أسكوت التحلية جدة",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت ليلتين",
+    "nights": 1,
+    "check_in": "2024-10-13",
+    "check_out": "2024-10-14",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 712,
+    "currency": "SAR",
+    "payment_method": "الدفع عند الوصول",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-50051-A",
+        "type": "capture",
+        "amount": 712,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة غير مدخنين",
+      "طابق هادئ"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 50672,
+    "booking_id": "BK-50672",
+    "customer_name": "يوسف القحطاني",
+    "hotel_name": "اسوار للاجنحة الفندقية",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت ليلتين",
+    "nights": 1,
+    "check_in": "2024-10-20",
+    "check_out": "2024-10-21",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 737,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-50672-A",
+        "type": "capture",
+        "amount": 737,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "تسجيل وصول مبكر عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 53216,
+    "booking_id": "BK-53216",
+    "customer_name": "عبدالله المطيري",
+    "hotel_name": "أوريس للشقق الفندقية ديرة",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت 3 ليالي",
+    "nights": 3,
+    "check_in": "2025-03-13",
+    "check_out": "2025-03-16",
+    "guests": {
+      "adults": 1,
+      "children": 1
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 1365,
+    "currency": "SAR",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-53216-A",
+        "type": "capture",
+        "amount": 1365,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 56063,
+    "booking_id": "BK-56063",
+    "customer_name": "تركي الحربي",
+    "hotel_name": "فندق اوريس بلازا",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة كلاسيكية كينغ",
+    "stay_description": "أقمت 5 ليالي",
+    "nights": 5,
+    "check_in": "2025-01-29",
+    "check_out": "2025-02-03",
+    "guests": {
+      "adults": 2,
+      "children": 1
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 1585,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-56063-A",
+        "type": "capture",
+        "amount": 1585,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 56181,
+    "booking_id": "BK-56181",
+    "customer_name": "شيماء المالكي",
+    "hotel_name": "فندق اوريس بلازا",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة كلاسيكية كينغ",
+    "stay_description": "أقمت 5 ليالي",
+    "nights": 5,
+    "check_in": "2025-03-25",
+    "check_out": "2025-03-30",
+    "guests": {
+      "adults": 1,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 2355,
+    "currency": "SAR",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-56181-A",
+        "type": "capture",
+        "amount": 2355,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "semi_flexible",
+      "free_cancellation_until_hours_before_checkin": 24,
+      "refund_processing_days": "5-10 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة غير مدخنين",
+      "طابق هادئ"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 57300,
+    "booking_id": "BK-57300",
+    "customer_name": "يوسف القحطاني",
+    "hotel_name": "فندق أوالف إنترناشيونال",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة النادي",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2024-12-04",
+    "check_out": "2024-12-05",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 366,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-57300-A",
+        "type": "capture",
+        "amount": 366,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": false,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 58231,
+    "booking_id": "BK-58231",
+    "customer_name": "ندى سامي",
+    "hotel_name": "فندق أيلا بوادي",
+    "hotel_city": "مكة",
+    "room_type": "غرفة كوين كلاسيكية",
+    "stay_description": "أقمت ليلتين",
+    "nights": 2,
+    "check_in": "2025-04-07",
+    "check_out": "2025-04-09",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 1070,
+    "currency": "SAR",
+    "payment_method": "الدفع عند الوصول",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-58231-A",
+        "type": "capture",
+        "amount": 1070,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "حسب موافقة الفندق"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "سرير إضافي عند التوفر",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 58515,
+    "booking_id": "BK-58515",
+    "customer_name": "دلال الشهري",
+    "hotel_name": "فندق أيلا",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة كلاسيكية كينغ",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2024-06-07",
+    "check_out": "2024-06-08",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 630,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-58515-A",
+        "type": "capture",
+        "amount": 630,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": false,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "سرير إضافي عند التوفر",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 60621,
+    "booking_id": "BK-60621",
+    "customer_name": "ريم السلمي",
+    "hotel_name": "فندق ومارينا البيلسان",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة ديلوكس مزدوجة مطلة على البحر",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-09-15",
+    "check_out": "2025-09-16",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 538,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-60621-A",
+        "type": "capture",
+        "amount": 538,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "إفطار مبكر",
+      "غرفة عالية"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 62700,
+    "booking_id": "BK-62700",
+    "customer_name": "أميرة الحبيب",
+    "hotel_name": "فنادق ومنتجعات بيتش ريزورت بن ماجد",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-06-04",
+    "check_out": "2025-06-05",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 616,
+    "currency": "SAR",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-62700-A",
+        "type": "capture",
+        "amount": 616,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "semi_flexible",
+      "free_cancellation_until_hours_before_checkin": 24,
+      "refund_processing_days": "5-10 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة بإطلالة",
+      "حمام مع بانيو"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 64708,
+    "booking_id": "BK-64708",
+    "customer_name": "رنا الجهني",
+    "hotel_name": "اجنحة بودل الفيصلية",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-08-01",
+    "check_out": "2025-08-02",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 756,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-64708-A",
+        "type": "capture",
+        "amount": 756,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة غير مدخنين",
+      "طابق هادئ"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 64997,
+    "booking_id": "BK-64997",
+    "customer_name": "عبدالله المطيري",
+    "hotel_name": "بودل الميدان",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت ليلتين",
+    "nights": 1,
+    "check_in": "2025-05-09",
+    "check_out": "2025-05-10",
+    "guests": {
+      "adults": 2,
+      "children": 1
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 614,
+    "currency": "SAR",
+    "payment_method": "بطاقة بنكية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-64997-A",
+        "type": "capture",
+        "amount": 614,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "semi_flexible",
+      "free_cancellation_until_hours_before_checkin": 24,
+      "refund_processing_days": "5-10 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "سرير إضافي عند التوفر",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 65095,
+    "booking_id": "BK-65095",
+    "customer_name": "وليد الصبيحي",
+    "hotel_name": "بودل الميدان",
+    "hotel_city": "مكة",
+    "room_type": "جناح من غرفة نوم واحدة",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-03-24",
+    "check_out": "2025-03-25",
+    "guests": {
+      "adults": 1,
+      "children": 1
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 240,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-65095-A",
+        "type": "capture",
+        "amount": 240,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "semi_flexible",
+      "free_cancellation_until_hours_before_checkin": 24,
+      "refund_processing_days": "5-10 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": false,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "سرير إضافي عند التوفر",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 65264,
+    "booking_id": "BK-65264",
+    "customer_name": "راشد الكندي",
+    "hotel_name": "بودل الميدان",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت 3 ليالي",
+    "nights": 3,
+    "check_in": "2024-06-24",
+    "check_out": "2024-06-27",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 1350,
+    "currency": "SAR",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-65264-A",
+        "type": "capture",
+        "amount": 1350,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": false,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة بإطلالة",
+      "حمام مع بانيو"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 65731,
+    "booking_id": "BK-65731",
+    "customer_name": "خالد الدوسري",
+    "hotel_name": "بودل القصر",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-03-30",
+    "check_out": "2025-03-31",
+    "guests": {
+      "adults": 1,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 632,
+    "currency": "SAR",
+    "payment_method": "الدفع عند الوصول",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-65731-A",
+        "type": "capture",
+        "amount": 632,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": false,
+      "parking_included": true,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "تسجيل وصول مبكر عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 65772,
+    "booking_id": "BK-65772",
+    "customer_name": "سارة العتيبي",
+    "hotel_name": "بودل الورود",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت 5 ليالي",
+    "nights": 5,
+    "check_in": "2025-03-01",
+    "check_out": "2025-03-06",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 1645,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-65772-A",
+        "type": "capture",
+        "amount": 1645,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": false,
+      "parking_included": false,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "مناسبة خاصة - عيد ميلاد",
+      "تزيين الغرفة"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 65932,
+    "booking_id": "BK-65932",
+    "customer_name": "هيا البلوي",
+    "hotel_name": "فندق بودل البريدة",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2025-04-24",
+    "check_out": "2025-04-25",
+    "guests": {
+      "adults": 1,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 314,
+    "currency": "SAR",
+    "payment_method": "الدفع عند الوصول",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-65932-A",
+        "type": "capture",
+        "amount": 314,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": false,
+      "parking_included": false,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "غرفة غير مدخنين",
+      "طابق هادئ"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 65951,
+    "booking_id": "BK-65951",
+    "customer_name": "تركي الحربي",
+    "hotel_name": "فندق بودل البريدة",
+    "hotel_city": "مكة",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت ليلتين",
+    "nights": 1,
+    "check_in": "2024-09-17",
+    "check_out": "2024-09-18",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 563,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-65951-A",
+        "type": "capture",
+        "amount": 563,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": false,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "سرير إضافي عند التوفر",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 68539,
+    "booking_id": "BK-68539",
+    "customer_name": "خلود الشايع",
+    "hotel_name": "بودل الطائف",
+    "hotel_city": "الخبر",
+    "room_type": "غرفة مزدوجة",
+    "stay_description": "أقمت ليلتين",
+    "nights": 2,
+    "check_in": "2025-04-23",
+    "check_out": "2025-04-25",
+    "guests": {
+      "adults": 1,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 860,
+    "currency": "SAR",
+    "payment_method": "الدفع عند الوصول",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-68539-A",
+        "type": "capture",
+        "amount": 860,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "سرير إضافي عند التوفر",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 72500,
+    "booking_id": "BK-72500",
+    "customer_name": "راشد الكندي",
+    "hotel_name": "فندق كابيتول",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة تنفيذية مزدوجة",
+    "stay_description": "أقمت 3 ليالي",
+    "nights": 3,
+    "check_in": "2024-12-12",
+    "check_out": "2024-12-15",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 606,
+    "currency": "SAR",
+    "payment_method": "محفظة إلكترونية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-72500-A",
+        "type": "capture",
+        "amount": 606,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "semi_flexible",
+      "free_cancellation_until_hours_before_checkin": 24,
+      "refund_processing_days": "5-10 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "سرير إضافي عند التوفر",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 74706,
+    "booking_id": "BK-74706",
+    "customer_name": "ريم السلمي",
+    "hotel_name": "سنترو روتانا البرشاء",
+    "hotel_city": "دبي",
+    "room_type": "غرفة بريميوم",
+    "stay_description": "أقمت 4 ليالي",
+    "nights": 4,
+    "check_in": "2024-09-11",
+    "check_out": "2024-09-15",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 4544,
+    "currency": "AED",
+    "payment_method": "الدفع عند الوصول",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-74706-A",
+        "type": "capture",
+        "amount": 4544,
+        "currency": "AED",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": false,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "إفطار مبكر",
+      "غرفة عالية"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 75360,
+    "booking_id": "BK-75360",
+    "customer_name": "ماجد الصاعدي",
+    "hotel_name": "سنترو الشارقة - باي روتانا",
+    "hotel_city": "دبي",
+    "room_type": "غرفة قياسية",
+    "stay_description": "أقمت ليلة واحدة",
+    "nights": 1,
+    "check_in": "2024-12-22",
+    "check_out": "2024-12-23",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 670,
+    "currency": "AED",
+    "payment_method": "تحويل بنكي",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-75360-A",
+        "type": "capture",
+        "amount": 670,
+        "currency": "AED",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "flexible",
+      "free_cancellation_until_hours_before_checkin": 48,
+      "refund_processing_days": "3-7 أيام عمل"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": false
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "سرير إضافي عند التوفر",
+      "قرب المصعد عند الإمكان"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 75794,
+    "booking_id": "BK-75794",
+    "customer_name": "محمد الشمري",
+    "hotel_name": "سنترو الشارقة - باي روتانا",
+    "hotel_city": "دبي",
+    "room_type": "غرفة كوين كلاسيكية",
+    "stay_description": "أقمت 4 ليالي",
+    "nights": 4,
+    "check_in": "2024-11-21",
+    "check_out": "2024-11-25",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 1284,
+    "currency": "AED",
+    "payment_method": "بطاقة بنكية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-75794-A",
+        "type": "capture",
+        "amount": 1284,
+        "currency": "AED",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": true,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "مناسبة خاصة - عيد ميلاد",
+      "تزيين الغرفة"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
+    "order_id": 76207,
+    "booking_id": "BK-76207",
+    "customer_name": "سارة العتيبي",
+    "hotel_name": "فندق تشيلسي بلازا",
+    "hotel_city": "الرياض",
+    "room_type": "غرفة ديلوكس مزدوجة",
+    "stay_description": "أقمت 3 ليالي",
+    "nights": 3,
+    "check_in": "2024-10-14",
+    "check_out": "2024-10-17",
+    "guests": {
+      "adults": 2,
+      "children": 0
+    },
+    "booking_status": "completed",
+    "room_assignment_status": "assigned",
+    "payment_status": "paid",
+    "total_amount": 2151,
+    "currency": "SAR",
+    "payment_method": "بطاقة بنكية",
+    "payment_transactions": [
+      {
+        "transaction_id": "TX-76207-A",
+        "type": "capture",
+        "amount": 2151,
+        "currency": "SAR",
+        "status": "captured"
+      }
+    ],
+    "channel": "SoukAI Hotels",
+    "cancellation_policy": {
+      "type": "non_refundable",
+      "free_cancellation_until_hours_before_checkin": 0,
+      "refund_processing_days": "لا يوجد استرداد"
+    },
+    "included_services": {
+      "breakfast_included": false,
+      "wifi_included": true,
+      "parking_included": true,
+      "room_service_available": true
+    },
+    "service_sla_minutes": {
+      "housekeeping_request": 45,
+      "maintenance_request": 60,
+      "room_service_request": 40,
+      "front_desk_callback": 15
+    },
+    "special_requests": [
+      "إفطار مبكر",
+      "غرفة عالية"
+    ],
+    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
+  },
+  {
     "order_id": 90001,
     "booking_id": "BK-90001",
     "customer_name": "نورا السبيعي",
@@ -1244,384 +5276,6 @@
     },
     "special_requests": [
       "غرفة غير مدخنين",
-      "قرب المصعد عند الإمكان"
-    ],
-    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
-  },
-  {
-    "order_id": 58231,
-    "booking_id": "BK-58231",
-    "customer_name": "ندى سامي",
-    "hotel_name": "فندق أيلا بوادي",
-    "hotel_city": "مكة",
-    "room_type": "غرفة كوين كلاسيكية",
-    "stay_description": "أقمت ليلتين",
-    "nights": 2,
-    "check_in": "2025-04-07",
-    "check_out": "2025-04-09",
-    "guests": {
-      "adults": 2,
-      "children": 0
-    },
-    "booking_status": "completed",
-    "room_assignment_status": "assigned",
-    "payment_status": "paid",
-    "total_amount": 1070,
-    "currency": "SAR",
-    "payment_method": "الدفع عند الوصول",
-    "payment_transactions": [
-      {
-        "transaction_id": "TX-58231-A",
-        "type": "capture",
-        "amount": 1070,
-        "currency": "SAR",
-        "status": "captured"
-      }
-    ],
-    "channel": "SoukAI Hotels",
-    "cancellation_policy": {
-      "type": "non_refundable",
-      "free_cancellation_until_hours_before_checkin": 0,
-      "refund_processing_days": "حسب موافقة الفندق"
-    },
-    "included_services": {
-      "breakfast_included": false,
-      "wifi_included": true,
-      "parking_included": true,
-      "room_service_available": true
-    },
-    "service_sla_minutes": {
-      "housekeeping_request": 45,
-      "maintenance_request": 60,
-      "room_service_request": 40,
-      "front_desk_callback": 15
-    },
-    "special_requests": [
-      "سرير إضافي عند التوفر",
-      "قرب المصعد عند الإمكان"
-    ],
-    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
-  },
-  {
-    "order_id": 21326,
-    "booking_id": "BK-21326",
-    "customer_name": "عبدالرحمن خالد",
-    "hotel_name": "المجاز بريميير للشقق الفندقية",
-    "hotel_city": "المدينة المنورة",
-    "room_type": null,
-    "stay_description": "أقمت 7 ليالي",
-    "nights": 7,
-    "check_in": "2025-04-11",
-    "check_out": "2025-04-18",
-    "guests": {
-      "adults": 1,
-      "children": 1
-    },
-    "booking_status": "completed",
-    "room_assignment_status": "assigned",
-    "payment_status": "paid",
-    "total_amount": 3500,
-    "currency": "SAR",
-    "payment_method": "بطاقة بنكية",
-    "payment_transactions": [
-      {
-        "transaction_id": "TX-21326-A",
-        "type": "capture",
-        "amount": 3500,
-        "currency": "SAR",
-        "status": "captured"
-      }
-    ],
-    "channel": "SoukAI Hotels",
-    "cancellation_policy": {
-      "type": "flexible",
-      "free_cancellation_until_hours_before_checkin": 48,
-      "refund_processing_days": "3-7 أيام عمل"
-    },
-    "included_services": {
-      "breakfast_included": true,
-      "wifi_included": false,
-      "parking_included": true,
-      "room_service_available": true
-    },
-    "service_sla_minutes": {
-      "housekeeping_request": 45,
-      "maintenance_request": 60,
-      "room_service_request": 40,
-      "front_desk_callback": 15
-    },
-    "special_requests": [
-      "غرفة غير مدخنين",
-      "قرب المصعد عند الإمكان"
-    ],
-    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
-  },
-  {
-    "order_id": 42042,
-    "booking_id": "BK-42042",
-    "customer_name": "خديجة علي",
-    "hotel_name": "فندق أنجم مكة",
-    "hotel_city": "جدة",
-    "room_type": "غرفة ديلوكس توأمية مطلة على الحرم",
-    "stay_description": "أقمت ليلة واحدة",
-    "nights": 1,
-    "check_in": "2025-04-15",
-    "check_out": "2025-04-16",
-    "guests": {
-      "adults": 2,
-      "children": 0
-    },
-    "booking_status": "completed",
-    "room_assignment_status": "assigned",
-    "payment_status": "paid",
-    "total_amount": 520,
-    "currency": "SAR",
-    "payment_method": "الدفع عند الوصول",
-    "payment_transactions": [
-      {
-        "transaction_id": "TX-42042-A",
-        "type": "capture",
-        "amount": 520,
-        "currency": "SAR",
-        "status": "captured"
-      }
-    ],
-    "channel": "SoukAI Hotels",
-    "cancellation_policy": {
-      "type": "semi_flexible",
-      "free_cancellation_until_hours_before_checkin": 24,
-      "refund_processing_days": "5-10 أيام عمل"
-    },
-    "included_services": {
-      "breakfast_included": false,
-      "wifi_included": true,
-      "parking_included": false,
-      "room_service_available": true
-    },
-    "service_sla_minutes": {
-      "housekeeping_request": 45,
-      "maintenance_request": 60,
-      "room_service_request": 40,
-      "front_desk_callback": 15
-    },
-    "special_requests": [
-      "سرير إضافي عند التوفر",
-      "طابق هادئ"
-    ],
-    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
-  },
-  {
-    "order_id": 37891,
-    "booking_id": "BK-37891",
-    "customer_name": "بدر العلي",
-    "hotel_name": "آلوفت أبوظبي",
-    "hotel_city": "الرياض",
-    "room_type": "غرفة مرتفعة",
-    "stay_description": "أقمت ليلة واحدة",
-    "nights": 1,
-    "check_in": "2025-04-19",
-    "check_out": "2025-04-20",
-    "guests": {
-      "adults": 2,
-      "children": 0
-    },
-    "booking_status": "completed",
-    "room_assignment_status": "assigned",
-    "payment_status": "paid",
-    "total_amount": 360,
-    "currency": "SAR",
-    "payment_method": "بطاقة بنكية",
-    "payment_transactions": [
-      {
-        "transaction_id": "TX-37891-A",
-        "type": "capture",
-        "amount": 360,
-        "currency": "SAR",
-        "status": "captured"
-      }
-    ],
-    "channel": "SoukAI Hotels",
-    "cancellation_policy": {
-      "type": "non_refundable",
-      "free_cancellation_until_hours_before_checkin": 0,
-      "refund_processing_days": "حسب موافقة الفندق"
-    },
-    "included_services": {
-      "breakfast_included": true,
-      "wifi_included": true,
-      "parking_included": true,
-      "room_service_available": true
-    },
-    "service_sla_minutes": {
-      "housekeeping_request": 45,
-      "maintenance_request": 60,
-      "room_service_request": 40,
-      "front_desk_callback": 15
-    },
-    "special_requests": [
-      "غرفة غير مدخنين",
-      "قرب المصعد عند الإمكان"
-    ],
-    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
-  },
-  {
-    "order_id": 68539,
-    "booking_id": "BK-68539",
-    "customer_name": "خلود الشايع",
-    "hotel_name": "بودل الطائف",
-    "hotel_city": "الخبر",
-    "room_type": "غرفة مزدوجة",
-    "stay_description": "أقمت ليلتين",
-    "nights": 2,
-    "check_in": "2025-04-23",
-    "check_out": "2025-04-25",
-    "guests": {
-      "adults": 1,
-      "children": 0
-    },
-    "booking_status": "completed",
-    "room_assignment_status": "assigned",
-    "payment_status": "paid",
-    "total_amount": 860,
-    "currency": "SAR",
-    "payment_method": "الدفع عند الوصول",
-    "payment_transactions": [
-      {
-        "transaction_id": "TX-68539-A",
-        "type": "capture",
-        "amount": 860,
-        "currency": "SAR",
-        "status": "captured"
-      }
-    ],
-    "channel": "SoukAI Hotels",
-    "cancellation_policy": {
-      "type": "flexible",
-      "free_cancellation_until_hours_before_checkin": 48,
-      "refund_processing_days": "3-7 أيام عمل"
-    },
-    "included_services": {
-      "breakfast_included": false,
-      "wifi_included": true,
-      "parking_included": true,
-      "room_service_available": true
-    },
-    "service_sla_minutes": {
-      "housekeeping_request": 45,
-      "maintenance_request": 60,
-      "room_service_request": 40,
-      "front_desk_callback": 15
-    },
-    "special_requests": [
-      "سرير إضافي عند التوفر",
-      "قرب المصعد عند الإمكان"
-    ],
-    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
-  },
-  {
-    "order_id": 19967,
-    "booking_id": "BK-19967",
-    "customer_name": "إبراهيم السالم",
-    "hotel_name": "فندق المدينة هارموني",
-    "hotel_city": "الطائف",
-    "room_type": "غرفة قياسية مزدوجة",
-    "stay_description": "أقمت ليلتين",
-    "nights": 2,
-    "check_in": "2025-04-27",
-    "check_out": "2025-04-29",
-    "guests": {
-      "adults": 2,
-      "children": 1
-    },
-    "booking_status": "completed",
-    "room_assignment_status": "assigned",
-    "payment_status": "paid",
-    "total_amount": 930,
-    "currency": "SAR",
-    "payment_method": "بطاقة بنكية",
-    "payment_transactions": [
-      {
-        "transaction_id": "TX-19967-A",
-        "type": "capture",
-        "amount": 930,
-        "currency": "SAR",
-        "status": "captured"
-      }
-    ],
-    "channel": "SoukAI Hotels",
-    "cancellation_policy": {
-      "type": "semi_flexible",
-      "free_cancellation_until_hours_before_checkin": 24,
-      "refund_processing_days": "5-10 أيام عمل"
-    },
-    "included_services": {
-      "breakfast_included": true,
-      "wifi_included": false,
-      "parking_included": true,
-      "room_service_available": true
-    },
-    "service_sla_minutes": {
-      "housekeeping_request": 45,
-      "maintenance_request": 60,
-      "room_service_request": 40,
-      "front_desk_callback": 15
-    },
-    "special_requests": [
-      "غرفة غير مدخنين",
-      "قرب المصعد عند الإمكان"
-    ],
-    "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
-  },
-  {
-    "order_id": 14749,
-    "booking_id": "BK-14749",
-    "customer_name": "ياسمين عادل",
-    "hotel_name": "فندق الحياة جدة كونتيننتال",
-    "hotel_city": "القاهرة",
-    "room_type": null,
-    "stay_description": "-",
-    "nights": 1,
-    "check_in": "2025-05-01",
-    "check_out": "2025-05-02",
-    "guests": {
-      "adults": 2,
-      "children": 0
-    },
-    "booking_status": "confirmed_pending_room_assignment",
-    "room_assignment_status": "not_assigned_yet",
-    "payment_status": "paid",
-    "total_amount": 360,
-    "currency": "EGP",
-    "payment_method": "الدفع عند الوصول",
-    "payment_transactions": [
-      {
-        "transaction_id": "TX-14749-A",
-        "type": "capture",
-        "amount": 360,
-        "currency": "EGP",
-        "status": "captured"
-      }
-    ],
-    "channel": "SoukAI Hotels",
-    "cancellation_policy": {
-      "type": "non_refundable",
-      "free_cancellation_until_hours_before_checkin": 0,
-      "refund_processing_days": "حسب موافقة الفندق"
-    },
-    "included_services": {
-      "breakfast_included": false,
-      "wifi_included": true,
-      "parking_included": true,
-      "room_service_available": true
-    },
-    "service_sla_minutes": {
-      "housekeeping_request": 45,
-      "maintenance_request": 60,
-      "room_service_request": 40,
-      "front_desk_callback": 15
-    },
-    "special_requests": [
-      "سرير إضافي عند التوفر",
       "قرب المصعد عند الإمكان"
     ],
     "internal_notes": "بيانات حجز وهمية للاختبار فقط ولا تحتوي على gold labels أو نتيجة التصنيف."
