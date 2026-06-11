@@ -5,6 +5,7 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
 from helpers.config import Settings, getSettings
+from prompts.system_prompt import test_prmpt
 from stores.LLMEnums import LLMEnums
 from tools import arabic_utils
 from tools.generate_response import (EmptyResponseError, Prompt,
@@ -48,7 +49,7 @@ async def answer_rag(
 
     Model_Name = LLMEnums.GROQ.value
     Model_ID = app_setting.GROQ_MODEL
-    prompt = Prompt(sys_prompt="", user_prompt=user_prompt)
+    prompt = Prompt(sys_prompt=test_prmpt, user_prompt=user_prompt)
 
 
     try:
