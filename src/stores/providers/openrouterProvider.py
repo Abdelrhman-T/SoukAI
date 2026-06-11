@@ -1,4 +1,5 @@
 import logging
+from enum import Enum
 from typing import List, Union
 
 from openai import OpenAI
@@ -10,6 +11,7 @@ from ..LLMInterface import LLMInterface
 class openrouterProvider(LLMInterface):
     def __init__(
         self,
+        enum,
         api_key: str,
         api_url: str = "",
         default_input_max_characters: int = 1000,
@@ -18,6 +20,8 @@ class openrouterProvider(LLMInterface):
     ):
         self.api_key = api_key
         self.api_url = api_url
+
+        self.enum = enum
 
         self.default_input_max_characters = default_input_max_characters
         self.default_generation_max_output_tokens = default_generation_max_output_tokens
@@ -94,7 +98,17 @@ class openrouterProvider(LLMInterface):
             self.logger.error("Error while generating text with OpenRouter")
             return None
 
-        return response.choices[0].message.content
+        usage = getattr(response, "usage", None)
+
+        return {
+            "text": response.choices[0].message.content,
+            "usage": {
+                "input_tokens": getattr(usage, "prompt_tokens", 0) if usage else 0,
+                "output_tokens": getattr(usage, "completion_tokens", 0)
+                if usage
+                else 0,
+            },
+        }
 
     def embed_text(self, text: Union[str, List[str]], document_type: str = ""):
         if not self.client:

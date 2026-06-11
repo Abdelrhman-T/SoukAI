@@ -29,6 +29,24 @@ class Settings(BaseSettings):
     DEFAULT_MAX_OUTPUT_TOKENS: int
     DEFAULT_TEMPERATURE: float
 
+
+
+    SAFETY_BLOCK_MESSAGE: str
+    INJECTION_BLOCK_MESSAGE: str
+    EMPTY_INPUT_MESSAGE: str
+    LONG_INPUT_MESSAGE: str
+
+    MISSING_ORDER_ID_MESSAGE:str 
+    ORDER_NOT_FOUND_MESSAGE:str 
+
+
+
+    GROQ_INPUT_PER_1K: float
+    GROQ_OUTPUT_PER_1K: float
+
+    OPENROUTER_INPUT_PER_1K: float
+    OPENROUTER_OUTPUT_PER_1K: float
+
     class Config:
         env_file = ".env"
 

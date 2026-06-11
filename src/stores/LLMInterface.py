@@ -19,7 +19,7 @@ class LLMInterface(ABC):
         chat_history: list = [],
         max_output_tokens: int = 200,
         temperature: float = 0.1,
-    ) -> (str | None):
+    ) -> (str | dict | None):
         pass
 
     @abstractmethod

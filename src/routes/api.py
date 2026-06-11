@@ -6,7 +6,11 @@ from pydantic import BaseModel
 
 from helpers.config import Settings, getSettings
 from stores.LLMEnums import LLMEnums
-from stores.LLMProviderFactory import LLMProviderFactory
+from tools import arabic_utils
+from tools.generate_response import (EmptyResponseError, Prompt,
+                                     PromptValidationError,
+                                     ProviderInitializationError,
+                                     ResponseGenerationError, llm_response)
 
 base_router = APIRouter(prefix="/api/v1", tags=["api_v1"])
 nlp_router = APIRouter(prefix="/api/v1/nlp", tags=["api_v1", "nlp"])
@@ -15,6 +19,7 @@ logger = logging.getLogger(__name__)
 
 class AnswerRequest(BaseModel):
     text: str
+
 
 
 @base_router.get("/")
@@ -30,50 +35,49 @@ async def answer_rag(
     request: AnswerRequest,
     app_setting: Settings = Depends(getSettings),
 ):
-    prompt = request.text.strip()
-    if not prompt:
+    user_prompt = arabic_utils.normalize_arabic(request.text)
+
+    print(user_prompt)
+
+    if not user_prompt:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="`text` must not be empty.",
         )
-    settings = app_setting
+    
 
     Model_Name = LLMEnums.GROQ.value
     Model_ID = app_setting.GROQ_MODEL
+    prompt = Prompt(sys_prompt="", user_prompt=user_prompt)
 
-    ProviderFactory = LLMProviderFactory(settings)
-    provider = ProviderFactory.create(Model_Name)
-    if not provider:
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Failed to initialize provider.",
-        )
 
     try:
-        answer = provider.generate_text(
+        response = llm_response(
+            provider_name=Model_Name,
             prompt=prompt,
-            chat_history=[],
-            max_output_tokens=app_setting.DEFAULT_MAX_OUTPUT_TOKENS,
-            temperature=app_setting.DEFAULT_TEMPERATURE,
+            app_settings=app_setting,
         )
-    except Exception as exc:
-        logger.exception(f"{Model_Name} generation failed")
+    except PromptValidationError as exc:
         raise HTTPException(
-            status_code=status.HTTP_502_BAD_GATEWAY,
-            detail=f"{Model_Name} request failed.",
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(exc),
         ) from exc
-
-    if not answer:
+    except ProviderInitializationError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=str(exc),
+        ) from exc
+    except (ResponseGenerationError, EmptyResponseError) as exc:
         raise HTTPException(
             status_code=status.HTTP_502_BAD_GATEWAY,
-            detail=f"{Model_Name} returned an empty response.",
-        )
+            detail=str(exc),
+        ) from exc
 
     return JSONResponse(
         content={
-            "provider": Model_Name,
+            "provider": response["provider"],
             "model": Model_ID,
-            "text": prompt,
-            "answer": answer,
+            "text": user_prompt,
+            "answer": response["answer"],
         }
     )
