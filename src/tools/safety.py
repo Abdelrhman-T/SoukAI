@@ -1,22 +1,22 @@
 from tools.arabic_utils import contains_any, detect_script
 
 PROFANITY_KEYWORDS = [
-    "حمار",
-    "اغبياء",
-    "نصابين",
-    "كلاب",
-    "زبالة",
-    "stupid",
-    "idiot",
+    "حمار","اغبياء","نصابين","كلاب","زبالة","stupid","idiot",
+    "غبي", "اغبياء", "زفت", "نصب", "احتيال", "حرامية",
+    "سرقة", "قذر", "سبام", "اهانة", "لعنة",
+    "إساءة", "شتائم",
+
 ]
 
 INJECTION_KEYWORDS = [
-    "تجاهل التعليمات",
+    "تجاهل التعليمات", "تجاهل", "التعليمات", "قيود", "بدون قيود"
     "ignore previous instructions",
     "system prompt",
+    "SYSTEM","SYSTEM:", "override", "set"
     "اكسر القواعد",
     "اعطني السيستم برومبت",
     "developer message",
+    "SQL", "SELECT", "FROM", "WHERE", "DROP", "TABLE"
 ]
 
 

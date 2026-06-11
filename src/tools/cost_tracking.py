@@ -1,12 +1,13 @@
 from helpers.config import Settings, getSettings
+from stores.LLMEnums import LLMEnums
 
 settings = getSettings()
 
 def estimate_cost(input_tokens: int, output_tokens: int) -> float:
     
-    if settings.GENERATION_BACKEND == "GROQ":
+    if settings.GENERATION_BACKEND == LLMEnums.GROQ.value:
         pricing = [settings.GROQ_INPUT_PER_1K, settings.GROQ_OUTPUT_PER_1K]
-    elif settings.GENERATION_BACKEND == "OPENROUTER":
+    elif settings.GENERATION_BACKEND == LLMEnums.OPENROUTER.value:
         pricing = [settings.OPENROUTER_INPUT_PER_1K, settings.OPENROUTER_OUTPUT_PER_1K]
     else:
         pricing = [0.0,0.0]

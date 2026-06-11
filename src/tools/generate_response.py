@@ -97,7 +97,7 @@ def llm_response(
         ) from exc
 
     normalized_answer = _normalize_provider_response(answer)
-
+    
     if not normalized_answer["text"]:
         raise EmptyResponseError(
             f"{provider_name} returned an empty response."

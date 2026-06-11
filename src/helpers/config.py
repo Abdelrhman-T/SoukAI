@@ -1,9 +1,20 @@
+from pathlib import Path
 from typing import List
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+ROOT_DIR = Path(__file__).resolve().parents[2]
+ENV_FILES = (
+    ROOT_DIR / ".env",
+    ROOT_DIR / "src" / ".env",
+)
+
 
 class Settings(BaseSettings):
+    model_config = SettingsConfigDict(
+        env_file=tuple(str(path) for path in ENV_FILES),
+        extra="ignore",
+    )
         
     APP_NAME: str
     APP_VERSION: str
@@ -46,10 +57,6 @@ class Settings(BaseSettings):
 
     OPENROUTER_INPUT_PER_1K: float
     OPENROUTER_OUTPUT_PER_1K: float
-
-    class Config:
-        env_file = ".env"
-
 
 def getSettings():
     return Settings()
