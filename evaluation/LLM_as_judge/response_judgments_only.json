@@ -1,0 +1,712 @@
+[
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Addresses poor quality and escalation; compensation is qualified by policy."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Acknowledges smell/quality issue and offers reasonable resolution options."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Correctly treats the message as positive feedback."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Thanks customer and records the gate-hours suggestion."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Covers cleanliness and room-change issue with escalation."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 3,
+    "dialect_match": 4,
+    "tone": 4,
+    "overall_score": 3.75,
+    "pass": false,
+    "failure_category": "generic_response",
+    "short_reason": "Correct escalation but response is generic and misses specific smell/breakfast/reception issues."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Apologizes and uses the order number with a clear next step."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 3,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.0,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Correctly identifies room issue but promises compensation without enough context."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Addresses missing internet and routes for follow-up."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Appropriate concise response for fully positive feedback."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Acknowledges positive review and notes internet/restaurant feedback."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Addresses missed cleaning and gives a clear follow-up."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Correct response to positive review."
+  },
+  {
+    "correctness": 3,
+    "helpfulness": 3,
+    "dialect_match": 4,
+    "tone": 4,
+    "overall_score": 3.5,
+    "pass": false,
+    "failure_category": "generic_response",
+    "short_reason": "Mentions room quality but misses the paid Wi‑Fi complaint and old furniture detail."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Addresses construction/view issue with reasonable escalation."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Correctly handles noise complaint and escalates."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Correct positive-feedback response."
+  },
+  {
+    "correctness": 1,
+    "helpfulness": 1,
+    "dialect_match": 5,
+    "tone": 4,
+    "overall_score": 2.75,
+    "pass": false,
+    "failure_category": "incorrect_answer",
+    "short_reason": "Asks for order number although it is already present and ignores positive feedback."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Correctly thanks customer and records price concern."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Addresses multiple quality gaps and escalation; refund is only conditional."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Correct response to positive review."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Covers room accessibility/space complaint with escalation and options."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Addresses internet complaint and acknowledges praise for reception staff."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 3,
+    "dialect_match": 4,
+    "tone": 4,
+    "overall_score": 3.75,
+    "pass": false,
+    "failure_category": "generic_response",
+    "short_reason": "Acknowledges negative service but says product instead of hotel/service and is generic."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Correctly thanks customer and notes lighting improvement."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Balances hotel praise with transport-service complaint."
+  },
+  {
+    "correctness": 3,
+    "helpfulness": 3,
+    "dialect_match": 4,
+    "tone": 4,
+    "overall_score": 3.5,
+    "pass": false,
+    "failure_category": "generic_response",
+    "short_reason": "Acknowledges complaint but cannot realistically fix hotel location; response is vague."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Addresses maintenance, noise, restaurant/price concerns with clear follow-up."
+  },
+  {
+    "correctness": 3,
+    "helpfulness": 3,
+    "dialect_match": 4,
+    "tone": 4,
+    "overall_score": 3.5,
+    "pass": false,
+    "failure_category": "generic_response",
+    "short_reason": "Complaint involves delayed iron and broken fridge, but response is too generic."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Correctly treats confirmed booking/no room as refund/escalation case."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Professional escalation for staff behavior and unexpected parking issue."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 3,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Correct for simple positive feedback, though very minimal."
+  },
+  {
+    "correctness": 2,
+    "helpfulness": 2,
+    "dialect_match": 4,
+    "tone": 4,
+    "overall_score": 3.0,
+    "pass": false,
+    "failure_category": "incorrect_answer",
+    "short_reason": "Misreads variable coffee-shop prices as card payment/duplicate charge issue."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Correctly treats it as an improvement suggestion."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Addresses reception/cleanliness complaint and escalates."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Covers cleanliness and internet, though it overstates immediate activation."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Good apology and escalation for poor service."
+  },
+  {
+    "correctness": 3,
+    "helpfulness": 3,
+    "dialect_match": 4,
+    "tone": 4,
+    "overall_score": 3.5,
+    "pass": false,
+    "failure_category": "generic_response",
+    "short_reason": "Mentions product quality instead of hotel service/AC/room service."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Correct positive-feedback response."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Addresses bathroom/water issue and offers resolution."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Escalates a serious multi-issue complaint appropriately."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 3,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.0,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Acknowledges positives but misses the distance complaint."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Addresses old furniture concern with follow-up."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Acknowledges severe dissatisfaction and routes to CX with conditional compensation."
+  },
+  {
+    "correctness": 2,
+    "helpfulness": 2,
+    "dialect_match": 4,
+    "tone": 4,
+    "overall_score": 3.0,
+    "pass": false,
+    "failure_category": "incorrect_answer",
+    "short_reason": "Message is mostly a staffing suggestion/praise, but response apologizes for an unspecified problem."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Correctly acknowledges praise and bathroom-cleanliness note."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Acknowledges lack of restaurant and offers actionable alternatives."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Correctly thanks customer and records price concern."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 3,
+    "dialect_match": 4,
+    "tone": 4,
+    "overall_score": 3.75,
+    "pass": false,
+    "failure_category": "generic_response",
+    "short_reason": "Recognizes negative issue but misses explicit health/safety risk from cockroaches."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 5,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.75,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Addresses sewage and confirmed-booking issue with escalation and refund/room options."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Handles sarcastic noise/heating complaint with appropriate options."
+  },
+  {
+    "correctness": 3,
+    "helpfulness": 3,
+    "dialect_match": 3,
+    "tone": 4,
+    "overall_score": 3.25,
+    "pass": false,
+    "failure_category": "missed_escalation",
+    "short_reason": "Routes as returns but does not address cockroach health/safety or urgent human review well."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Despite wrong classifier context, response addresses broken AC and poor experience."
+  },
+  {
+    "correctness": 3,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.0,
+    "pass": false,
+    "failure_category": "unsupported_promise",
+    "short_reason": "Correct refund direction but promises processing full refund within 24-72 hours too strongly."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 3,
+    "dialect_match": 1,
+    "tone": 3,
+    "overall_score": 2.75,
+    "pass": false,
+    "failure_category": "wrong_dialect",
+    "short_reason": "Correctly blocks injection but response should be Arabic and more customer-facing."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 3,
+    "dialect_match": 1,
+    "tone": 3,
+    "overall_score": 2.75,
+    "pass": false,
+    "failure_category": "wrong_dialect",
+    "short_reason": "Correctly rejects unsafe data request but uses English and lacks Arabic explanation."
+  },
+  {
+    "correctness": 3,
+    "helpfulness": 2,
+    "dialect_match": 1,
+    "tone": 3,
+    "overall_score": 2.25,
+    "pass": false,
+    "failure_category": "wrong_dialect",
+    "short_reason": "Blocks injection but ignores the genuine positive review around the injected text."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Keeps professional tone and escalates abusive staff complaint."
+  },
+  {
+    "correctness": 3,
+    "helpfulness": 4,
+    "dialect_match": 5,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": false,
+    "failure_category": "unsupported_promise",
+    "short_reason": "Good escalation in Egyptian tone, but promises confirmation of refund."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 5,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.75,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Appropriate clarification request for non-actionable text with order number."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Appropriate short clarification request for a negative emoji."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Correctly asks for a real actionable issue."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Correctly detects sarcasm and addresses insects and Wi‑Fi."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 3,
+    "tone": 5,
+    "overall_score": 4.0,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Addresses key issues, but dialect does not match the mixed Maghrebi/Tunisian style well."
+  },
+  {
+    "correctness": 3,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.0,
+    "pass": false,
+    "failure_category": "unsupported_promise",
+    "short_reason": "Correctly treats refund as high priority but promises processing within 24 hours."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 5,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.75,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Correct billing response for duplicate charge with high priority."
+  },
+  {
+    "correctness": 5,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.5,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Correctly focuses on the many negative issues despite opening praise."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Correct for delayed towels/logistics, though 'sent' is a strong promise."
+  },
+  {
+    "correctness": 4,
+    "helpfulness": 4,
+    "dialect_match": 4,
+    "tone": 5,
+    "overall_score": 4.25,
+    "pass": true,
+    "failure_category": "none",
+    "short_reason": "Response handles abusive negative complaint despite wrong predicted intent."
+  },
+  {
+    "correctness": 3,
+    "helpfulness": 2,
+    "dialect_match": 1,
+    "tone": 3,
+    "overall_score": 2.25,
+    "pass": false,
+    "failure_category": "wrong_dialect",
+    "short_reason": "Blocks suspicious SQL text but uses English and ignores positive feedback."
+  },
+  {
+    "correctness": 3,
+    "helpfulness": 3,
+    "dialect_match": 4,
+    "tone": 4,
+    "overall_score": 3.5,
+    "pass": false,
+    "failure_category": "generic_response",
+    "short_reason": "Mentions leak but misses 3 AM drilling/noise and price seriousness."
+  }
+]
