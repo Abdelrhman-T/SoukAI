@@ -126,7 +126,7 @@ pip install -r requirements.txt
 
 ```bash
 cd SoukAI/src/env
-cp .env.example.app .env
+cp .env.example .env
 ```
 - Add your api_keys
 - Choose your preferred Provider
