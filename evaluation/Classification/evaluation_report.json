@@ -97,12 +97,12 @@
         }
     },
     "urgency": {
-        "accuracy": 0.4225
+        "accuracy": 0.4507
     },
     "requires_human": {
-        "accuracy": 0.6479
+        "accuracy": 0.6761
     },
     "routed_team": {
-        "accuracy": 0.5775
+        "accuracy": 0.6056
     }
 }
