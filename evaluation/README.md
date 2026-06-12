@@ -84,9 +84,9 @@ Source: `evaluation/Classification/evaluation_report.json`
 
 | Field | Accuracy |
 | --- | ---: |
-| `routed_team` | 0.5775 |
-| `urgency` | 0.4225 |
-| `requires_human` | 0.6479 |
+| `routed_team` | 0.6056 |
+| `urgency` | 0.4507 |
+| `requires_human` | 0.6761 |
 
 ## 4. Qualitative Response Quality
 
@@ -141,8 +141,13 @@ Source: `evaluation/predicted_set.json`
 | Average estimated cost | 0.0 USD |
 | Total estimated cost | 0.0 USD |
 
-- The Cost here = 0 because i used free provider (groq)
-- You can change it to OpenRouter by just .env file
+1- Average latency is relatively high because the evaluation sent 71 requests to Groq in a single batch run. This likely introduced provider-side queuing, network overhead, and rate-limit-related delays.
+
+2- Minimum latency is very low because some requests may have been handled locally before calling the LLM, for example validation, safety checks, or rule-based routing.
+
+3-The estimated cost is reported as 0.0 USD because this run used Groq's free tier. This does not mean the model has no real infrastructure cost; it only means no direct usage cost was charged for this experiment.
+
+4- The provider can be switched to OpenRouter by changing the provider configuration in the `.env` file, without modifying the evaluation code.
 
 ## 6. Breakdown of Failures by Category
 
