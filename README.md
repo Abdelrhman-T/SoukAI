@@ -117,7 +117,7 @@ conda activate soukai
 ### 4. Installing dependencies
 
 ```bash
-cd SoukAI/src/
+cd SoukAI/
 pip install -r requirements.txt
 ```
 ---
