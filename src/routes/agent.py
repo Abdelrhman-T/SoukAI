@@ -187,15 +187,15 @@ def _answer(state: AgentState) -> AgentState:
             "output_tokens": 0,
         }
 
-    if not state.get("order_id") and not state.get("injection_detected", False):
-        return {
-            "provider": provider_name,
-            "model": model_name,
-            "answer": state["app_settings"].MISSING_ORDER_ID_MESSAGE,
-            "draft_response_ar": state["app_settings"].MISSING_ORDER_ID_MESSAGE,
-            "input_tokens": 0,
-            "output_tokens": 0,
-        }
+    # if not state.get("order_id") and not state.get("injection_detected", False):
+    #     return {
+    #         "provider": provider_name,
+    #         "model": model_name,
+    #         "answer": state["app_settings"].MISSING_ORDER_ID_MESSAGE,
+    #         "draft_response_ar": state["app_settings"].MISSING_ORDER_ID_MESSAGE,
+    #         "input_tokens": 0,
+    #         "output_tokens": 0,
+    #     }
 
     if state.get("order_id") and not state.get("order"):
         return {
