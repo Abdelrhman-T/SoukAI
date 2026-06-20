@@ -339,53 +339,27 @@ def _graph_factory() -> Any:
 
     return workflow.compile()
 
-
-@agent_router.post("/answer")
-async def answer_with_agent(
-    request: AgentRequest,
-    app_settings: Settings = Depends(getSettings),
-):
+def run_agent_text(
+    text: str,
+    app_settings: Settings,
+) -> dict[str, Any]:
     start_time = time.perf_counter()
     graph = _graph_factory()
     provider_name, model_name = _resolve_generation_target(app_settings)
 
-    try:
-        result = graph.invoke(
-            {
-                "text": request.text,
-                "provider": provider_name,
-                "model": model_name,
-                "max_input_characters": app_settings.DEFAULT_INPUT_MAX_CHARACTERS,
-                "app_settings": app_settings,
-            }
-        )
-    except ProviderInitializationError as exc:
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=str(exc),
-        ) from exc
-    except (ResponseGenerationError, EmptyResponseError) as exc:
-        raise HTTPException(
-            status_code=status.HTTP_502_BAD_GATEWAY,
-            detail=str(exc),
-        ) from exc
-
-    if result.get("blocked_reason") == app_settings.EMPTY_INPUT_MESSAGE:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=app_settings.EMPTY_INPUT_MESSAGE,
-        )
-
-    if result.get("blocked_reason") == app_settings.LONG_INPUT_MESSAGE:
-        raise HTTPException(
-            status_code=status.HTTP_413_REQUEST_ENTITY_TOO_LARGE,
-            detail=app_settings.LONG_INPUT_MESSAGE,
-        )
+    result = graph.invoke(
+        {
+            "text": text,
+            "provider": provider_name,
+            "model": model_name,
+            "max_input_characters": app_settings.DEFAULT_INPUT_MAX_CHARACTERS,
+            "app_settings": app_settings,
+        }
+    )
 
     latency_ms = estimate_latency(start_time, time.perf_counter())
 
-    return JSONResponse(
-        content={
+    return {
         "intent": result.get("intent", intent_rules.DEFAULT_INTENT),
         "intent_confidence": result.get("intent_confidence", 0.0),
         "urgency": result.get("escalation_priority") or "low",
@@ -399,6 +373,32 @@ async def answer_with_agent(
         "reasoning_trace": _build_reasoning_trace(result),
         "tools_used": _build_tools_used(result),
         "latency_ms": latency_ms,
-        "est_cost_usd": estimate_cost(int(result.get("input_tokens", 0) or 0), int(result.get("output_tokens", 0) or 0)),
-        }
-    )
+        "est_cost_usd": estimate_cost(
+            int(result.get("input_tokens", 0) or 0),
+            int(result.get("output_tokens", 0) or 0),
+        ),
+    }
+
+
+@agent_router.post("/answer")
+async def answer_with_agent(
+    request: AgentRequest,
+    app_settings: Settings = Depends(getSettings),
+):
+    try:
+        response = run_agent_text(
+            text=request.text,
+            app_settings=app_settings,
+        )
+    except ProviderInitializationError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=str(exc),
+        ) from exc
+    except (ResponseGenerationError, EmptyResponseError) as exc:
+        raise HTTPException(
+            status_code=status.HTTP_502_BAD_GATEWAY,
+            detail=str(exc),
+        ) from exc
+
+    return JSONResponse(content=response)

@@ -58,5 +58,10 @@ class Settings(BaseSettings):
     OPENROUTER_INPUT_PER_1K: float
     OPENROUTER_OUTPUT_PER_1K: float
 
+    META_GRAPH_VERSION: str
+    FACEBOOK_PAGE_ACCESS_TOKEN: str
+    FACEBOOK_PAGE_ID: str
+    META_VERIFY_TOKEN: str
+
 def getSettings():
     return Settings()

@@ -163,6 +163,180 @@ uvicorn main:app --reload
 
 ---
 
+
+## Facebook Page Integration
+
+SoukAI can be connected to a Facebook Page webhook to receive new page comments, process them through the agent flow, and reply automatically.
+
+### 1. Configure Facebook environment variables
+
+Add the following values to your `.env` file:
+
+```env
+FACEBOOK_PAGE_ACCESS_TOKEN=your_page_access_token
+FACEBOOK_PAGE_ID=your_facebook_page_id
+META_VERIFY_TOKEN=soukai_verify_123
+```
+
+Notes:
+
+* `FACEBOOK_PAGE_ACCESS_TOKEN` must be a valid Page Access Token.
+* `FACEBOOK_PAGE_ID` is the ID of the Facebook Page you want to connect.
+* `META_VERIFY_TOKEN` must match the token you enter in Meta Webhooks.
+
+---
+
+### 2. Run the FastAPI server
+
+From the `src` directory, run:
+
+```bash
+cd SoukAI/src
+uvicorn main:app --reload
+```
+
+The API should now be available at:
+
+```text
+http://localhost:8000
+```
+
+You can also open the FastAPI documentation from:
+
+```text
+http://localhost:8000/docs
+```
+
+---
+
+### 3. Expose the local server using ngrok
+
+Open a second terminal and run:
+
+```bash
+C:\ngrok\ngrok.exe http 8000
+```
+
+ngrok will generate a public HTTPS URL similar to:
+
+```text
+https://f531-197-133-80-228.ngrok-free.app
+```
+
+Keep this terminal running while testing the Facebook integration.
+
+Important: if you restart ngrok, the public URL may change. In that case, update the Callback URL in Meta Developer Dashboard.
+
+---
+
+### 4. Configure Meta Webhooks
+
+Go to:
+
+```text
+Meta Developer Dashboard
+→ Your App
+→ Webhooks
+→ Page
+```
+
+Set the webhook configuration as follows:
+
+```text
+Callback URL:
+https://YOUR_NGROK_URL.ngrok-free.app/api/v1/meta/webhook
+
+Verify Token:
+soukai_verify_123
+```
+
+Example:
+
+```text
+Callback URL:
+https://f531-197-133-80-228.ngrok-free.app/api/v1/meta/webhook
+
+Verify Token:
+soukai_verify_123
+```
+
+Then subscribe to the Page webhook field:
+
+```text
+feed
+```
+
+This allows SoukAI to receive new Facebook Page comment events.
+
+---
+
+### 5. Subscribe the Facebook Page to the App
+
+Using Graph API Explorer with a valid Page Access Token, subscribe the page to the app:
+
+```http
+POST /{PAGE_ID}/subscribed_apps
+```
+
+With parameter:
+
+```text
+subscribed_fields=feed
+```
+
+You can verify the subscription with:
+
+```http
+GET /{PAGE_ID}/subscribed_apps?fields=name,subscribed_fields
+```
+
+Expected result should include:
+
+```json
+{
+  "name": "SoukAI",
+  "subscribed_fields": [
+    "feed"
+  ]
+}
+```
+
+---
+
+### 6. Test the webhook
+
+First, test from Meta Developer Dashboard:
+
+```text
+Webhooks
+→ Page
+→ feed
+→ Test
+```
+
+You should see the request appear in:
+
+```text
+ngrok inspector: http://127.0.0.1:4040
+```
+
+and in the FastAPI terminal.
+
+---
+
+### 7. Test with a real Facebook comment
+
+Create or open a normal post on your Facebook Page, then add a new comment from a personal Facebook account.
+
+Example comment:
+
+```text
+الاوردر متأخر ومحدش بيرد عليا رقم الطلب 12345
+```
+
+If the integration is configured correctly, SoukAI will receive the comment, process it through the agent, and reply automatically on the Facebook comment.
+
+
 ## Additional Documentation
 
 * `evaluation\README.md` → Evaluation Report
