@@ -65,5 +65,9 @@ class Settings(BaseSettings):
     FACEBOOK_PAGE_ID: str
     META_VERIFY_TOKEN: str
 
+
+    SUPABASE_URL: str = ""
+    SUPABASE_SERVICE_ROLE_KEY: str = ""
+
 def getSettings():
     return Settings()

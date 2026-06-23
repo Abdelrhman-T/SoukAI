@@ -1,12 +1,9 @@
-import csv
 import json
 import logging
 import random
 import re
-import threading
 import time
 from datetime import datetime
-from pathlib import Path
 from typing import Any
 
 from pydantic import BaseModel, ConfigDict, ValidationError, field_validator
@@ -14,35 +11,13 @@ from pydantic import BaseModel, ConfigDict, ValidationError, field_validator
 from helpers.config import ROOT_DIR, Settings
 from prompts.judge_prompt import llm_as_judge
 from stores.LLMEnums import LLMEnums
+from tools.evaluation_store import save_evaluation_to_supabase
 from tools.generate_response import (Prompt, ProviderInitializationError,
                                      llm_response)
 
 logger = logging.getLogger(__name__)
 JSON_BLOCK_RE = re.compile(r"\{.*\}", re.DOTALL)
-EVALUATION_LOG_PATH = ROOT_DIR / "evaluation" / "LLM_as_judge" / "runtime_response_evaluations.csv"
-CSV_LOCK = threading.Lock()
-CSV_FIELDNAMES = [
-    "evaluated_at",
-    "evaluation_provider",
-    "evaluation_model",
-    "customer_message",
-    "predicted_intent",
-    "routed_team",
-    "generated_response",
-    "evaluation_status",
-    "evaluation_time_ms",
-    "correctness",
-    "helpfulness",
-    "dialect_match",
-    "tone",
-    "overall_score",
-    "pass",
-    "failure_category",
-    "short_reason",
-    "judge_input_tokens",
-    "judge_output_tokens",
-    "evaluation_error",
-]
+
 FAILURE_CATEGORIES = [
     "none",
     "incorrect_answer",
@@ -126,17 +101,6 @@ def _parse_judge_payload(answer: str) -> JudgeResult:
         raise ValueError("Judge payload failed validation.") from exc
 
 
-def _append_csv_row(row: dict[str, Any], csv_path: Path) -> None:
-    csv_path.parent.mkdir(parents=True, exist_ok=True)
-
-    with CSV_LOCK:
-        needs_header = not csv_path.exists() or csv_path.stat().st_size == 0
-        with csv_path.open("a", encoding="utf-8", newline="") as csv_file:
-            writer = csv.DictWriter(csv_file, fieldnames=CSV_FIELDNAMES)
-            if needs_header:
-                writer.writeheader()
-            writer.writerow(row)
-
 
 def _render_judge_prompt(
     *,
@@ -175,7 +139,6 @@ def evaluate_response(
     draft_response_ar: str,
     app_settings: Settings,
     sample_rate: float = 0.5,
-    csv_path: Path = EVALUATION_LOG_PATH,
 ) -> dict[str, Any]:
     evaluated_at = datetime.now().astimezone().isoformat(timespec="seconds")
 
@@ -216,25 +179,24 @@ def evaluate_response(
         parsed_judgment = _parse_judge_payload(judge_response["answer"])
         evaluation_time_ms = round((time.perf_counter() - started_at) * 1000, 2)
 
-        _append_csv_row(
-            {
-                **base_row,
-                "evaluation_status": "judged",
-                "evaluation_time_ms": evaluation_time_ms,
-                "correctness": parsed_judgment.correctness,
-                "helpfulness": parsed_judgment.helpfulness,
-                "dialect_match": parsed_judgment.dialect_match,
-                "tone": parsed_judgment.tone,
-                "overall_score": parsed_judgment.overall_score,
-                "pass": parsed_judgment.passed,
-                "failure_category": parsed_judgment.failure_category,
-                "short_reason": parsed_judgment.short_reason,
-                "judge_input_tokens": judge_response.get("input_tokens", 0),
-                "judge_output_tokens": judge_response.get("output_tokens", 0),
-                "evaluation_error": "",
-            },
-            csv_path=csv_path,
-        )
+        row = {
+            **base_row,
+            "evaluation_status": "judged",
+            "evaluation_time_ms": evaluation_time_ms,
+            "correctness": parsed_judgment.correctness,
+            "helpfulness": parsed_judgment.helpfulness,
+            "dialect_match": parsed_judgment.dialect_match,
+            "tone": parsed_judgment.tone,
+            "overall_score": parsed_judgment.overall_score,
+            "pass": parsed_judgment.passed,
+            "failure_category": parsed_judgment.failure_category,
+            "short_reason": parsed_judgment.short_reason,
+            "judge_input_tokens": judge_response.get("input_tokens", 0),
+            "judge_output_tokens": judge_response.get("output_tokens", 0),
+            "evaluation_error": "",
+        }
+
+        save_evaluation_to_supabase(row, app_settings)
 
         return {
             "sampled_for_evaluation": True,
@@ -254,25 +216,24 @@ def evaluate_response(
             evaluation_time_ms,
         )
 
-        _append_csv_row(
-            {
-                **base_row,
-                "evaluation_status": "error",
-                "evaluation_time_ms": evaluation_time_ms,
-                "correctness": "",
-                "helpfulness": "",
-                "dialect_match": "",
-                "tone": "",
-                "overall_score": "",
-                "pass": "",
-                "failure_category": "",
-                "short_reason": "",
-                "judge_input_tokens": 0,
-                "judge_output_tokens": 0,
-                "evaluation_error": str(exc),
-            },
-            csv_path=csv_path,
-        )
+        row = {
+            **base_row,
+            "evaluation_status": "error",
+            "evaluation_time_ms": evaluation_time_ms,
+            "correctness": None,
+            "helpfulness": None,
+            "dialect_match": None,
+            "tone": None,
+            "overall_score": None,
+            "pass": None,
+            "failure_category": None,
+            "short_reason": None,
+            "judge_input_tokens": 0,
+            "judge_output_tokens": 0,
+            "evaluation_error": str(exc),
+        }
+
+        save_evaluation_to_supabase(row, app_settings)
 
         return {
             "sampled_for_evaluation": True,
