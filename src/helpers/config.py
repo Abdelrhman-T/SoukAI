@@ -24,6 +24,8 @@ class Settings(BaseSettings):
 
     BACKEND_LITERAL: List[str]
     GENERATION_BACKEND: str
+    JUDGE_BACKEND: str
+    MODEL_JUDGE: str
 
     OPENROUTER_API_KEY: str
     OPENROUTER_URL: str
@@ -34,7 +36,7 @@ class Settings(BaseSettings):
     GROQ_API_KEY: str
 
     GROQ_MODEL: str
-
+    
 
     DEFAULT_INPUT_MAX_CHARACTERS: int
     DEFAULT_MAX_OUTPUT_TOKENS: int

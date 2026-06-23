@@ -16,6 +16,7 @@ from tools.arabic_utils import detect_script, normalize_arabic
 from tools.classification import classify_intent
 from tools.cost_tracking import estimate_cost, estimate_latency
 from tools.escalation import escalate_to_human
+from tools.evaluation import evaluate_response
 from tools.generate_response import (EmptyResponseError,
                                      ProviderInitializationError,
                                      ResponseGenerationError, draft_response)
@@ -52,6 +53,11 @@ class AgentState(TypedDict, total=False):
     escalation_priority: str
     input_tokens: int
     output_tokens: int
+    sampled_for_evaluation: bool
+    evaluation_status: str
+    evaluation_time_ms: float
+    evaluation_pass: bool
+    evaluation_error: str
     max_input_characters: int
     app_settings: Settings
 
@@ -187,15 +193,15 @@ def _answer(state: AgentState) -> AgentState:
             "output_tokens": 0,
         }
 
-    if not state.get("order_id") and not state.get("injection_detected", False):
-        return {
-            "provider": provider_name,
-            "model": model_name,
-            "answer": state["app_settings"].MISSING_ORDER_ID_MESSAGE,
-            "draft_response_ar": state["app_settings"].MISSING_ORDER_ID_MESSAGE,
-            "input_tokens": 0,
-            "output_tokens": 0,
-        }
+    # if not state.get("order_id") and not state.get("injection_detected", False):
+    #     return {
+    #         "provider": provider_name,
+    #         "model": model_name,
+    #         "answer": state["app_settings"].MISSING_ORDER_ID_MESSAGE,
+    #         "draft_response_ar": state["app_settings"].MISSING_ORDER_ID_MESSAGE,
+    #         "input_tokens": 0,
+    #         "output_tokens": 0,
+    #     }
 
     if state.get("order_id") and not state.get("order"):
         return {
@@ -249,6 +255,25 @@ def _answer(state: AgentState) -> AgentState:
     }
 
 
+def _evaluate_response(state: AgentState) -> AgentState:
+    try:
+        return evaluate_response(
+            review=state["text"], # type: ignore
+            intent=state.get("intent", intent_rules.DEFAULT_INTENT),
+            routed_team=state.get("routed_team", "Auto Response"),
+            draft_response_ar=state.get("draft_response_ar", state.get("answer", "")),
+            app_settings=state["app_settings"],
+            sample_rate=0.5,
+        )
+    except Exception as exc:
+        return {
+            "sampled_for_evaluation": True,
+            "evaluation_status": "error",
+            "evaluation_time_ms": 0.0,
+            "evaluation_error": str(exc),
+        }
+
+
 def _build_entities(order_id: Optional[str], order: Optional[dict[str, Any]]) -> dict[str, Any]:
     order = order or {}
     return {
@@ -300,6 +325,9 @@ def _build_tools_used(result: AgentState) -> list[str]:
     if result.get("input_tokens", 0) or result.get("output_tokens", 0):
         tools_used.append("draft_response")
 
+    if result.get("sampled_for_evaluation"):
+        tools_used.append("evaluate_response")
+
     return tools_used
 
 
@@ -327,6 +355,7 @@ def _graph_factory() -> Any:
     workflow.add_node("lookup_order_node", RunnableLambda(_lookup_order))
     workflow.add_node("search_kb_node", RunnableLambda(_search_kb))
     workflow.add_node("answer_node", RunnableLambda(_answer))
+    workflow.add_node("evaluate_response_node", RunnableLambda(_evaluate_response))
 
     workflow.add_edge(START, "preprocess_node")
     workflow.add_edge("preprocess_node", "safety_check_node")
@@ -335,7 +364,8 @@ def _graph_factory() -> Any:
     workflow.add_edge("extract_order_id_node", "lookup_order_node")
     workflow.add_edge("lookup_order_node", "search_kb_node")
     workflow.add_edge("search_kb_node", "answer_node")
-    workflow.add_edge("answer_node", END)
+    workflow.add_edge("answer_node", "evaluate_response_node")
+    workflow.add_edge("evaluate_response_node", END)
 
     return workflow.compile()
 

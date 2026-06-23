@@ -63,6 +63,7 @@ def llm_response(
     provider_name: str,
     prompt: Prompt,
     app_settings: Settings,
+    model_name: str | None = None,
 ):
     provider_factory = LLMProviderFactory(app_settings)
     provider = provider_factory.create(provider_name)
@@ -71,6 +72,9 @@ def llm_response(
         raise ProviderInitializationError(
             f"Failed to initialize provider: {provider_name}"
         )
+
+    if model_name and hasattr(provider, "set_generation_model"):
+        provider.set_generation_model(model_name)
 
     chat_history = []
 

@@ -1,4 +1,10 @@
-from tools.arabic_utils import contains_any, detect_script
+from nltk.stem.isri import ISRIStemmer
+
+from tools.arabic_utils import (contains_any, detect_script, ratio_hits,
+                                tokenize)
+
+_isri_stemmer = ISRIStemmer()
+
 
 PROFANITY_KEYWORDS = [
     "حمار","اغبياء","نصابين","كلاب","زبالة","stupid","idiot",
@@ -21,7 +27,14 @@ INJECTION_KEYWORDS = [
 
 
 def profanity_filter(text: str) -> bool:
-    return contains_any(text, PROFANITY_KEYWORDS)
+    tokens = tokenize(text)
+    stem_tokens = [_isri_stemmer.stem(token) for token in tokens]
+    stem_keywords= [_isri_stemmer.stem(keyword) for keyword in PROFANITY_KEYWORDS]
+    profanity_ratio = ratio_hits(stem_tokens, stem_keywords)
+    if profanity_ratio > 0.5:
+        return True
+    else:
+        return False
 
 
 def detect_prompt_injection(text: str) -> bool:
