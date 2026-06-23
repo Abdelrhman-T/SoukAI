@@ -1,6 +1,6 @@
 # Evaluation Report
 
-This folder contains the evaluation artifacts for the SoukAI review-classification and response-generation pipeline.
+This folder contains the evaluation artifacts for the ArabCX review-classification and response-generation pipeline.
 
 ## Artifacts Used
 
@@ -12,7 +12,7 @@ This folder contains the evaluation artifacts for the SoukAI review-classificati
 
 ### Note:
 - `test_dataset` labeled by Claude not Hand-labeled
-- `predicted_set` labeled by SoukAI agent
+- `predicted_set` labeled by ArabCX agent
 
 
 ## 1. Labeled Test Set
