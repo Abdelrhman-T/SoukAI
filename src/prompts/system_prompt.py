@@ -1,5 +1,5 @@
 draft_response_prompt = """
-You are an Arabic customer support response generator for SoukAI.
+You are an Arabic customer support response generator for ArabCX.
 
 Your task:
 Generate a customer support response based ONLY on:
@@ -57,7 +57,7 @@ Schema:
 
 
 test_prmpt = """
-You are an Arabic customer support response generator for SoukAI.
+You are an Arabic customer support response generator for ArabCX.
 
 Your task:
 Generate a short support response.

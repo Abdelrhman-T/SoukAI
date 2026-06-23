@@ -1,12 +1,12 @@
-# SoukAI
+# ArabCX
 
-SoukAI is an Arabic e-commerce customer support triage agent built for the **SoukAI GenAI engineering challenge**. The goal is to triage Arabic customer messages for a hypothetical pan-Arab marketplace and help CX teams decide what should be auto-handled, routed, or escalated.
+ArabCX is an Arabic e-commerce customer support triage agent built for the **ArabCX GenAI engineering challenge**. The goal is to triage Arabic customer messages for a hypothetical pan-Arab marketplace and help CX teams decide what should be auto-handled, routed, or escalated.
 
 The project focuses on practical Arabic-language support scenarios across **Modern Standard Arabic (MSA)** and regional dialects including **Egyptian, Gulf, Levantine, and Maghrebi**.
 
 ## Overview
 
-SoukAI receives large volumes of customer messages through its app and website: delivery complaints, refund requests, app bugs, billing issues, product quality problems, positive feedback, and abusive or spam content. SoukAI is designed as the AI triage layer in front of human support operations.
+ArabCX receives large volumes of customer messages through its app and website: delivery complaints, refund requests, app bugs, billing issues, product quality problems, positive feedback, and abusive or spam content. ArabCX is designed as the AI triage layer in front of human support operations.
 
 For each incoming Arabic message, the target workflow is to:
 
@@ -34,11 +34,11 @@ Important limitation:
 
 - HARD is a **hotel reviews** dataset, not a native e-commerce customer support dataset
 
-Because of that, the dataset is used here as a **foundation for Arabic language understanding and evaluation**, while the triage problem itself is adapted to the SoukAI e-commerce scenario with mock support data, intent logic, and evaluation assets.
+Because of that, the dataset is used here as a **foundation for Arabic language understanding and evaluation**, while the triage problem itself is adapted to the ArabCX e-commerce scenario with mock support data, intent logic, and evaluation assets.
 
 ## High-Level System Design
 
-At a high level, SoukAI is structured around these stages:
+At a high level, ArabCX is structured around these stages:
 
 1. **Input validation and normalization**
 2. **Safety filtering**
@@ -54,7 +54,7 @@ At a high level, SoukAI is structured around these stages:
 ## Project Structure
 
 ```text
-SoukAI/
+ArabCX/
 ├── README.md
 ├── requirements.txt
 ├── data/
@@ -83,41 +83,41 @@ SoukAI/
 ### 1. Clone the project
 
 ```bash
-git clone https://github.com/Abdelrhman-T/SoukAI.git
+git clone https://github.com/Abdelrhman-T/ArabCX.git
 ```
 
 ### 2. Navigate to project
 ```bash
-cd SoukAI
+cd ArabCX
 ```
 
 ### 3. Create Python environment
 
 ```bash
-python -m venv .soukai
+python -m venv .arabcx
 ```
 
 Windows (Command Prompt):
 ```bash
-.soukai\Scripts\activate.bat
+.arabcx\Scripts\activate.bat
 ```
 
 Windows (PowerShell):
 ```bash
-.soukai\Scripts\activate.bat
+.arabcx\Scripts\activate.bat
 ```
 
 Or use Conda
 
 ```bash
-conda create -n soukai python=3.14.3
-conda activate soukai
+conda create -n arabcx python=3.14.3
+conda activate arabcx
 ```
 
 ### 4. Installing dependencies
 
 ```bash
-cd SoukAI/
+cd ArabCX/
 pip install -r requirements.txt
 ```
 ---
@@ -125,7 +125,7 @@ pip install -r requirements.txt
 ### 5. Configure environment files
 
 ```bash
-cd SoukAI/src/env
+cd ArabCX/src/env
 cp .env.example .env
 ```
 - Add your api_keys
@@ -137,7 +137,7 @@ cp .env.example .env
 ### 6. Start api endpoints
 
 ```bash
-cd SoukAI/src
+cd ArabCX/src
 uvicorn main:app --reload
 ```
 
@@ -166,7 +166,7 @@ uvicorn main:app --reload
 
 ## Facebook Page Integration
 
-SoukAI can be connected to a Facebook Page webhook to receive new page comments, process them through the agent flow, and reply automatically.
+ArabCX can be connected to a Facebook Page webhook to receive new page comments, process them through the agent flow, and reply automatically.
 
 ### 1. Configure Facebook environment variables
 
@@ -175,7 +175,7 @@ Add the following values to your `.env` file:
 ```env
 FACEBOOK_PAGE_ACCESS_TOKEN=your_page_access_token
 FACEBOOK_PAGE_ID=your_facebook_page_id
-META_VERIFY_TOKEN=soukai_verify_123
+META_VERIFY_TOKEN=arabcx_verify_123
 ```
 
 Notes:
@@ -191,7 +191,7 @@ Notes:
 From the `src` directory, run:
 
 ```bash
-cd SoukAI/src
+cd ArabCX/src
 uvicorn main:app --reload
 ```
 
@@ -247,7 +247,7 @@ Callback URL:
 https://YOUR_NGROK_URL.ngrok-free.app/api/v1/meta/webhook
 
 Verify Token:
-soukai_verify_123
+arabcx_verify_123
 ```
 
 Example:
@@ -257,7 +257,7 @@ Callback URL:
 https://f531-197-133-80-228.ngrok-free.app/api/v1/meta/webhook
 
 Verify Token:
-soukai_verify_123
+arabcx_verify_123
 ```
 
 Then subscribe to the Page webhook field:
@@ -266,7 +266,7 @@ Then subscribe to the Page webhook field:
 feed
 ```
 
-This allows SoukAI to receive new Facebook Page comment events.
+This allows ArabCX to receive new Facebook Page comment events.
 
 ---
 
@@ -294,7 +294,7 @@ Expected result should include:
 
 ```json
 {
-  "name": "SoukAI",
+  "name": "ArabCX",
   "subscribed_fields": [
     "feed"
   ]
@@ -334,7 +334,7 @@ Example comment:
 الاوردر متأخر ومحدش بيرد عليا رقم الطلب 12345
 ```
 
-If the integration is configured correctly, SoukAI will receive the comment, process it through the agent, and reply automatically on the Facebook comment.
+If the integration is configured correctly, ArabCX will receive the comment, process it through the agent, and reply automatically on the Facebook comment.
 
 
 ## Additional Documentation
@@ -360,4 +360,4 @@ If the integration is configured correctly, SoukAI will receive the comment, pro
 
 ## Summary
 
-SoukAI is a baseline Arabic customer support triage agent for a pan-Arab e-commerce setting. It combines Arabic preprocessing, intent classification, mock retrieval, safety checks, and LLM response generation, with evaluation artifacts included to support end-to-end reasoning about quality and tradeoffs.
+ArabCX is a baseline Arabic customer support triage agent for a pan-Arab e-commerce setting. It combines Arabic preprocessing, intent classification, mock retrieval, safety checks, and LLM response generation, with evaluation artifacts included to support end-to-end reasoning about quality and tradeoffs.
