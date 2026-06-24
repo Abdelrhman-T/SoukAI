@@ -263,7 +263,7 @@ def _evaluate_response(state: AgentState) -> AgentState:
             routed_team=state.get("routed_team", "Auto Response"),
             draft_response_ar=state.get("draft_response_ar", state.get("answer", "")),
             app_settings=state["app_settings"],
-            sample_rate=0.5,
+            sample_rate=0.9,
         )
     except Exception as exc:
         return {
